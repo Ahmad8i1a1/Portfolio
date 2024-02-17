@@ -58,19 +58,19 @@
 
             <li>
                <a href="https://twitter.com/Code_Like_Ahmad" class="social-link">
-                <ion-icon name="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png"></ion-icon>
+                <ion-icon name="fab fa-twitter"></ion-icon>
               </a>
             </li>
             <li>
               <a href="https://github.com/Ahmad8i1a1" class="social-link">
-                <i class="fa fa-gamepad" aria-hidden="true"></i>
+                <i class="fab fa-github" aria-hidden="true"></i>
 
               </a>
             </li>
 
             <li>
-              <a href="https://www.youtube.com/channel/UCISOJ-tZR6ARclF3R-GynWQ" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
+              <a href="https://linktr.ee/ahmad_bi1a1" class="social-link">
+                <ion-icon name="logo-linktr.ee"></ion-icon>
               </a>
             </li>
 
@@ -175,7 +175,25 @@
         <!-- 
           - #All GAME
         -->
-       
+            <script >
+                let slideIndex = 1;
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function showSlides(n) {
+                  let slides = document.getElementsByClassName("slide");
+                  if (n > slides.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = slides.length}
+                  for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                  }
+                  slides[slideIndex-1].style.display = "block";
+                }
+
+                showSlides(slideIndex);
+             </script>
 
         <section class="section latest-game" aria-label="latest game">
           <div class="container">
@@ -191,17 +209,37 @@
               <li class="scrollbar-item">
                 <div class="latest-game-card">
 
+                <div class="slideshow-container" >
+                  <div class="slide active" >
                   <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
-                    <img src="./assets/images/blur1.jpg" width="400" height="470" loading="lazy"
+                    <img src="./assets/images/1.2.png" width="400" height="470" loading="lazy"
                       alt="Hunter Killer II" class="img-cover">
                   </figure>
+                  </div>
 
+                  <div class="slide">
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="./assets/images/1.1.png" width="400" height="470" loading="lazy"
+                      alt="Hunter Killer II" class="img-cover">
+                  </figure>
+                  </div>
+
+                  <div class="slide">
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="./assets/images/1.3.png" width="400" height="470" loading="lazy"
+                      alt="Hunter Killer II" class="img-cover">
+                  </figure>
+                  </div>
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                  </div>
                   <div class="card-content">
 
                     <a class="card-badge skewBg">Coming Soon</a>
 
                     <h3 class="h3">
-                      <a href="#" class="card-title">Coming <span class="span">Soon</span></a>
+                      <a href="#" class="card-title">Stack <span class="span">Balancer</span></a>
                     </h3>
 
                     <p class="card-price">
@@ -216,21 +254,42 @@
               <li class="scrollbar-item">
                 <div class="latest-game-card">
 
+                 
+                <div class="slideshow-container" >
+                  <div class="slide active" >
                   <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
-                    <img src="./assets/images/blur1.jpg" width="400" height="470" loading="lazy"
+                    <img src="./assets/images/1.jpg" width="400" height="470" loading="lazy"
                       alt="Hunter Killer II" class="img-cover">
                   </figure>
+                  </div>
 
+                  <div class="slide">
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="./assets/images/2.png" width="400" height="470" loading="lazy"
+                      alt="Hunter Killer II" class="img-cover">
+                  </figure>
+                  </div>
+
+                  <div class="slide">
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="./assets/images/3.jpg" width="400" height="470" loading="lazy"
+                      alt="Hunter Killer II" class="img-cover">
+                  </figure>
+                  </div>
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                  </div>
                   <div class="card-content">
 
-                    <a class="card-badge skewBg">Coming Soon</a>
+                   
 
                     <h3 class="h3">
-                      <a href="#" class="card-title">Coming <span class="span">Soon</span></a>
+                      <a href="https://youtu.be/dO6mLQHZJ30" class="card-title">Park Your <span class="span">Crusier</span></a>
                     </h3>
 
                     <p class="card-price">
-                      Coming <span class="span">Soon</span>
+                      Park Your Cruiser - 3D Impossible Car Parking Game for your kids. <span class="span">Numzz Tech</span>
                     </p>
 
                   </div>
@@ -241,11 +300,32 @@
 
               <li class="scrollbar-item">
                 <div class="latest-game-card">
-
+                
+                <div class="slideshow-container" >
+                  <div class="slide active" >
                   <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
-                    <img src="./assets/images/blur1.jpg" width="400" height="470" loading="lazy"
-                      alt="Cyberpunk Daily" class="img-cover">
+                    <img src="./assets/images/3.1.jpg" width="400" height="470" loading="lazy"
+                      alt="Hunter Killer II" class="img-cover">
                   </figure>
+                  </div>
+
+                  <div class="slide">
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="./assets/images/3.2.jpg" width="400" height="470" loading="lazy"
+                      alt="Hunter Killer II" class="img-cover">
+                  </figure>
+                  </div>
+
+                  <div class="slide">
+                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
+                    <img src="./assets/images/3.3.jpg" width="400" height="470" loading="lazy"
+                      alt="Hunter Killer II" class="img-cover">
+                  </figure>
+                  </div>
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                  </div>
 
                   <div class="card-content">
 
@@ -292,7 +372,7 @@
               <div class="blog-card">
 
                 <figure class="card-banner img-holder" style="--width: 400; --height: 290;">
-                 <div class="videoo"> <img src="Screenshot 2023-11-02 104237.png" width="4000" height="290" loading="lazy"
+                 <div class="videoo"> <img src="Screenshot 2023-11-02 104237.png" width="4000" height="350" loading="lazy"
                   alt="Video Thumnail" class="img-coverr"></div>
                 </figure>
 
@@ -303,7 +383,7 @@
                     <li class="card-meta-item">
                       <ion-icon name="person-outline"></ion-icon>
 
-                      <a href="https://www.youtube.com/@red_bunny_gamedev" class="item-text">RedBunnyGames</a>
+                      <a href="https://www.youtube.com/channel/UCISOJ-tZR6ARclF3R-GynWQ" class="item-text">Codewithme</a>
                     </li>
 
                     <li class="card-meta-item">
@@ -315,7 +395,7 @@
                   </ul>
 
                   <h3>
-                    <a href="https://www.youtube.com/channel/UCISOJ-tZR6ARclF3R-GynWQ" class="card-title" style="color: #ff1867;">RedBunnyGames - Channel Trailer</a>
+                    <a href="https://www.youtube.com/channel/UCISOJ-tZR6ARclF3R-GynWQ" class="card-title" style="color: #ff1867;">codewithme - Channel Trailer</a>
                   </h3>
 
                   <p class="card-text">
@@ -384,7 +464,7 @@ You can subscribe to my channel for fun Devlogs, Behind The Scenes & Game Traile
         I'm excited to share my game design journey with you. Explore my portfolio to see my projects and follow along as I continue to grow and develop my skills in the world of game design. If you have any questions or want to collaborate on a project, feel free to reach out. Let's create amazing gaming experiences together!
      </p>
      <br>
-     <a class="button" href="#contact" style="--color:#ff1867;;">
+     <a class="button" href="https://forms.gle/1FX2WgERgPCTECq36" style="--color:#ff1867;;">
       <span></span>
       <span></span>
       <span></span>
@@ -400,41 +480,7 @@ You can subscribe to my channel for fun Devlogs, Behind The Scenes & Game Traile
       </section>
 
 
-      <section class="section featured-game" id="contact" aria-label="featured game">
-        <div class="container">
-
-          <h2 class="h2 section-title">
-            Contact Me <span class="span">If Have Any Quiry</span>
-          </h2>
-
-          <div class="containerr">
-            <div class="content">
-              <div class="right-side">
-                <form action="https://formsubmit.co/22b334bfeb1a60851ee34235350ec225" method="post">
-                  <div class="input-box">
-                    <input type="text" name="name" id="name" placeholder="Enter your name" required><br>
-                  </div>
-                  <input type="hidden" name="_template" value="table">
-                  <input type="hidden" name="_next" value="https://shoaibpasha.netlify.app/">
-                  <input type="hidden" name="_captcha" value="false">
-                  <div class="input-box">
-                    <input type="email" name="email" id="email" placeholder="Enter your email" pattern=".+@gmail.com"
-                      size="30" required><br>
-                  </div>
-                  <div class="input-box message-box">
-                    <textarea name="message" id="sg" cols="30" rows="10" placeholder="Enter your message" required></textarea>
-                  </div>
-                  <div class="buttonn">
-                    <input type="submit" value="Send Now">
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        </div>
-      </section>
+      
       <!-- 
         - #NEWSLETTER
       -->
@@ -483,7 +529,7 @@ You can subscribe to my channel for fun Devlogs, Behind The Scenes & Game Traile
               </div>
 
               <address class="item-text">
-               <a href="https://en.wikipedia.org/wiki/India">Pakistan</a>
+               <a href="https://en.wikipedia.org/wiki/Pakistan">Pakistan</a>
               </address>
             </li>
 
@@ -493,7 +539,7 @@ You can subscribe to my channel for fun Devlogs, Behind The Scenes & Game Traile
               <div class="contact-icon">
                 <ion-icon name="mail-open"></ion-icon>
               </div>
-              <a  href="mailto:rbgredbunnygamedev@gmail.com" class="item-text">ahmadbilalmuhammadashraf@gmail.com</a>
+              <a  href="mailto:ahmadbilalmuhammadashraf@gmail.com" class="item-text">ahmadbilalmuhammadashraf@gmail.com</a>
             </li>
 
           </ul>
@@ -523,19 +569,19 @@ You can subscribe to my channel for fun Devlogs, Behind The Scenes & Game Traile
            
 
               <li>
-                <a href="https://www.youtube.com/channel/UCISOJ-tZR6ARclF3R-GynWQ" class="social-link" style="background-color: #d71e18">
-                  <ion-icon name="logo-youtube"></ion-icon>
+                <a href="https://linktr.ee/ahmad_bi1a1" class="social-link" style="background-color: #d71e18">
+                  <ion-icon name="logo-linktr.ee"></ion-icon>
                 </a>
               </li>
 
               <li>
                 <a href="https://twitter.com/Code_Like_Ahmad" class="social-link" style="background-color: #e232a8">
-                  <ion-icon name="logo-instagram"></ion-icon>
+                  <ion-icon name="logo-twitter"></ion-icon>
                 </a>
               </li>
               <li>
                 <a href="https://github.com/Ahmad8i1a1" class="social-link" style="background-color: #ffae00">
-                  <i class="fa fa-gamepad" aria-hidden="true"></i>
+                  <i class="fa fa-github" aria-hidden="true"></i>
                 </a>
               </li>
 
@@ -544,23 +590,7 @@ You can subscribe to my channel for fun Devlogs, Behind The Scenes & Game Traile
 
           </div>
 
-          <div class="footer-newsletter">
-
-            <p class="footer-list-title">Sign Up To Be The First One To Get Updates</p>
-
-            <form action="https://forms.gle/xK3sgJjtrqgpMTXK8" method="post" class="footer-newsletter">
-              <input type="email" name="UpdatesMail" aria-label="email" placeholder="Enter your email" required
-                class="email-field">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://devlos.netlify.app/">
-                <input type="hidden" name="_captcha" value="false">
-
-              <button type="submit" class="footer-btn" aria-label="submit">
-                <ion-icon name="rocket"></ion-icon>
-              </button>
-            </form>
-
-          </div>
+          
 
         </div>
 
@@ -574,7 +604,7 @@ You can subscribe to my channel for fun Devlogs, Behind The Scenes & Game Traile
           &copy; 2023 Ahmad Bilal. All Right Reserved by <a href="index.html" class="copyright-link">Ahmad Bilal</a>
         </p>
         <p class="copyright">
-           Website Made By <a href="https://www.instagram.com/devlos_/" class="copyright-link">Devlos</a>
+           Website Made By <a href="https://github.com/Ahmad8i1a1" class="copyright-link">Ahmad8i1a1</a>
         </p>
       </div>
     </div>
