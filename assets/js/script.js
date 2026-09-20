@@ -1,159 +1,172 @@
+/**
+ * Ahmad Bilal - Futuristic Portfolio Script
+ * Interactive HUD, Category Filters, Mobile Drawer & Scrollspy
+ */
+
 'use strict';
 
+document.addEventListener('DOMContentLoaded', () => {
 
-
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
-
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
-
-
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
-  });
-}
-
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+  // 1. Header Scrolled State
+  const header = document.querySelector('.header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) {
+      header.classList.add('scrolled');
     } else {
-      filterItems[i].classList.remove("active");
+      header.classList.remove('scrolled');
     }
+  }, { passive: true });
 
+  // 2. Mobile Drawer Navigation
+  const navToggleBtn = document.querySelector('.nav-toggle-btn');
+  const mobileNav = document.querySelector('.mobile-nav');
+  const mobileOverlay = document.querySelector('.mobile-overlay');
+  const mobileCloseBtn = document.querySelector('.mobile-close-btn');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  const openMobileNav = () => {
+    mobileNav.classList.add('active');
+    mobileOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeMobileNav = () => {
+    mobileNav.classList.remove('active');
+    mobileOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  if (navToggleBtn) navToggleBtn.addEventListener('click', openMobileNav);
+  if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileNav);
+  if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileNav);
+
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+  });
+
+  // 3. Scrollspy (Active Section Highlight)
+  const sections = document.querySelectorAll('section[id]');
+  const desktopNavLinks = document.querySelectorAll('.nav-link');
+
+  const updateActiveNavLink = () => {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 120;
+      const sectionId = current.getAttribute('id');
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        desktopNavLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+        mobileNavLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  };
+
+  window.addEventListener('scroll', updateActiveNavLink, { passive: true });
+
+  // 4. Multi-Category Project Filter
+  const filterChips = document.querySelectorAll('.filter-chip');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  const filterProjects = (selectedCategory) => {
+    const target = selectedCategory.trim().toLowerCase();
+
+    projectCards.forEach(card => {
+      if (target === 'all') {
+        card.classList.remove('hidden');
+      } else {
+        const cardCategories = (card.dataset.category || '')
+          .toLowerCase()
+          .split(',')
+          .map(cat => cat.trim());
+
+        if (cardCategories.includes(target)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      }
+    });
+  };
+
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', function () {
+      filterChips.forEach(c => c.classList.remove('active'));
+      this.classList.add('active');
+
+      const category = this.dataset.filterCategory || 'all';
+      filterProjects(category);
+    });
+  });
+
+  // 5. HUD Stats Counter Animation
+  const statValues = document.querySelectorAll('.hud-value[data-count]');
+  let hasAnimatedStats = false;
+
+  const animateStats = () => {
+    statValues.forEach(el => {
+      const target = parseFloat(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      const prefix = el.dataset.prefix || '';
+      const isFloat = el.dataset.float === 'true';
+      let current = 0;
+      const step = target / 40;
+
+      const updateCounter = () => {
+        current += step;
+        if (current < target) {
+          el.innerHTML = `${prefix}${isFloat ? current.toFixed(1) : Math.ceil(current)}<span class="accent">${suffix}</span>`;
+          requestAnimationFrame(updateCounter);
+        } else {
+          el.innerHTML = `${prefix}${target}<span class="accent">${suffix}</span>`;
+        }
+      };
+      updateCounter();
+    });
+  };
+
+  const statsSection = document.querySelector('.hud-grid');
+  if (statsSection) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !hasAnimatedStats) {
+        hasAnimatedStats = true;
+        animateStats();
+      }
+    }, { threshold: 0.2 });
+
+    observer.observe(statsSection);
   }
 
-}
+  // 6. Contact Form Submission Feedback
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('.form-submit-btn');
+      const originalText = submitBtn.innerHTML;
 
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
+      submitBtn.innerHTML = '<ion-icon name="checkmark-circle"></ion-icon> <span>Transmission Sent!</span>';
+      submitBtn.style.background = 'linear-gradient(135deg, #00f5a0 0%, #00f0ff 100%)';
 
-for (let i = 0; i < filterBtn.length; i++) {
+      setTimeout(() => {
+        contactForm.reset();
+        submitBtn.innerHTML = originalText;
+        submitBtn.style.background = '';
+      }, 4000);
+    });
+  }
 
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
-  });
-
-}
-
-
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
-}
-
-
-
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
-  });
-}
+});
