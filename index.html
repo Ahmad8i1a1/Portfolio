@@ -26,6 +26,76 @@
 
 <body>
 
+  <!-- Ambient Floating Vector Game Elements (King.com Style) -->
+  <div class="vector-ambient-layer" aria-hidden="true">
+    <!-- 1. Playful Vector Gem / Droplet -->
+    <div class="vector-floating-shape vector-shape-gem">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ff8533"/>
+            <stop offset="60%" stop-color="#ff6a00"/>
+            <stop offset="100%" stop-color="#c94f00"/>
+          </linearGradient>
+        </defs>
+        <path d="M32 4L58 20V44L32 60L6 44V20L32 4Z" fill="url(#gemGrad)" stroke="#ffc200" stroke-width="2"/>
+        <path d="M32 12L50 24V40L32 52L14 40V24L32 12Z" fill="rgba(255,255,255,0.18)"/>
+        <circle cx="26" cy="22" r="4" fill="rgba(255,255,255,0.65)"/>
+      </svg>
+    </div>
+
+    <!-- 2. Sparkling 4-Point Starburst (Gold / Mint) -->
+    <div class="vector-floating-shape vector-shape-star1">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="starGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fffa88"/>
+            <stop offset="100%" stop-color="#ffc200"/>
+          </linearGradient>
+        </defs>
+        <path d="M24 0L27.5 16.5L44 24L27.5 31.5L24 48L20.5 31.5L4 24L20.5 16.5L24 0Z" fill="url(#starGrad1)"/>
+        <circle cx="24" cy="24" r="3" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <!-- 3. Organic Translucent Game Bubble -->
+    <div class="vector-floating-shape vector-shape-bubble1">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="bubbleGrad1" cx="35%" cy="30%" r="65%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
+            <stop offset="40%" stop-color="rgba(0,182,125,0.3)"/>
+            <stop offset="100%" stop-color="rgba(0,182,125,0.05)"/>
+          </radialGradient>
+        </defs>
+        <circle cx="32" cy="32" r="30" fill="url(#bubbleGrad1)" stroke="rgba(0,182,125,0.4)" stroke-width="2"/>
+        <ellipse cx="23" cy="21" rx="8" ry="4" transform="rotate(-30 23 21)" fill="rgba(255,255,255,0.7)"/>
+      </svg>
+    </div>
+
+    <!-- 4. Sparkling Starburst 2 (Mint / Neon) -->
+    <div class="vector-floating-shape vector-shape-star2">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 2L28 18L44 24L28 30L24 46L20 30L4 24L20 18L24 2Z" fill="#00b67d"/>
+        <circle cx="24" cy="24" r="3" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <!-- 5. Floating Vector Game Diamond -->
+    <div class="vector-floating-shape vector-shape-diamond">
+      <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="diamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ff2a85"/>
+            <stop offset="100%" stop-color="#7928ca"/>
+          </linearGradient>
+        </defs>
+        <rect x="27" y="3" width="34" height="34" rx="7" transform="rotate(45 27 3)" fill="url(#diamGrad)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+        <circle cx="27" cy="27" r="5" fill="rgba(255,255,255,0.5)"/>
+      </svg>
+    </div>
+  </div>
+
   <!-- ==================== HEADER & NAVBAR ==================== -->
   <header class="header">
     <div class="container nav-wrapper">
@@ -215,12 +285,19 @@
       </div>
     </section>
 
+    <!-- Vector Wave Divider: Hero -> AI Stack -->
+    <div class="vector-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C150,90 350,-40 500,50 C650,140 900,10 1200,65 L1200,120 L0,120 Z" fill="#1d1637"></path>
+      </svg>
+    </div>
+
     <!-- ==================== AI & ENGINEERING STACK ==================== -->
-    <section class="section" id="ai-stack" style="background: rgba(29, 22, 55, 0.6);">
+    <section class="section" id="ai-stack" style="background: #1d1637;">
       <div class="container">
 
         <div class="section-header">
-          <div class="section-tag"><ion-icon name="flash-outline" style="vertical-align: -1px; margin-right: 4px;"></ion-icon> Engineering Superpower</div>
+          <div class="section-tag"><span class="vector-star-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span> Engineering Superpower</div>
           <h2 class="section-title">AI as a Force Multiplier // Grounded in Engine Craftsmanship</h2>
           <p class="section-desc">
             To an experienced game developer, AI is neither a crutch nor a code copy-paster—it is an advanced engineering compiler. By connecting custom LLMs directly into the Unity editor via Model Context Protocol (MCP) and Antigravity, I automate deterministic AST code audits, track memory regressions in real time, and eliminate repetitive boilerplate. This preserves 100% of my focus for what actually makes a great game: crisp game feel, tight collision physics, rock-solid architecture, and high-framerate performance.
@@ -298,12 +375,19 @@
       </div>
     </section>
 
+    <!-- Vector Wave Divider: AI Stack -> Services -->
+    <div class="vector-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,45 C200,110 400,-15 600,60 C800,135 1020,10 1200,50 L1200,120 L0,120 Z" fill="#150f28"></path>
+      </svg>
+    </div>
+
     <!-- ==================== CORE CAPABILITIES & SERVICES ==================== -->
     <section class="section" id="services">
       <div class="container">
 
         <div class="section-header">
-          <div class="section-tag"><ion-icon name="game-controller-outline" style="vertical-align: -1px; margin-right: 4px;"></ion-icon> Game Dev Disciplines</div>
+          <div class="section-tag"><span class="vector-star-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span> Game Dev Disciplines</div>
           <h2 class="section-title">Core Engine &amp; Systems Capabilities</h2>
           <p class="section-desc">
             Production-proven engineering across real-time 3D, gameplay physics, low-latency mobile architecture, and scalable live-ops cloud backends.
@@ -377,12 +461,19 @@
       </div>
     </section>
 
+    <!-- Vector Wave Divider: Services -> Projects -->
+    <div class="vector-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C160,85 360,-35 520,45 C680,125 920,20 1200,70 L1200,120 L0,120 Z" fill="#1d1637"></path>
+      </svg>
+    </div>
+
     <!-- ==================== FEATURED GAMES & PROJECTS ==================== -->
-    <section class="section" id="projects" style="background: rgba(21, 15, 40, 0.5);">
+    <section class="section" id="projects" style="background: #1d1637;">
       <div class="container">
 
         <div class="section-header">
-          <div class="section-tag"><ion-icon name="game-controller-outline" style="vertical-align: -1px; margin-right: 4px;"></ion-icon> Shipped &amp; Prototypes</div>
+          <div class="section-tag"><span class="vector-star-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span> Shipped &amp; Prototypes</div>
           <h2 class="section-title">Featured Games, Systems &amp; Technical Showcases</h2>
           <p class="section-desc">
             A curated archive of commercial mobile releases with 100k+ downloads, procedural physics prototypes, custom engine tooling, and open-source packages.
@@ -437,10 +528,10 @@
             <div class="project-content">
               <h3 class="project-title">Fruit Cutter - 3D Mesh Slicing</h3>
               <ul class="project-bullets">
-                <li>Real-time dynamic 3D mesh slicing & cutting in Unity C#.</li>
-                <li>Procedural geometry generation with UV remapping & plane intersection math.</li>
-                <li>Dynamic rigidbody physics, blade trails, and fruit splatter particle effects.</li>
-                <li>Highly optimized mobile-ready performance.</li>
+                <li>Real-time dynamic 3D mesh slicing built on custom character &amp; mesh slicer pipeline (<code>BzSliceSkinnedMeshAdapter</code>, <code>BzSliceableCharacterBase</code>).</li>
+                <li>Dynamic plane intersection math, vertex re-triangulation, and automated UV coordinate remapping for newly generated slice surfaces.</li>
+                <li>Automatic Rigidbody center-of-mass recalculation (<code>CenterOfMassColliderBasedHelper</code>) and real-time convex hull mesh collider instantiation.</li>
+                <li>Native Android frame pacing (<code>swappywrapper</code>, <code>armeabi-v7a</code> native optimization) ensuring locked 60 FPS mobile performance.</li>
               </ul>
               <div class="project-footer">
                 <div class="project-tags">
@@ -467,10 +558,10 @@
             <div class="project-content">
               <h3 class="project-title">AI Based Traffic Simulation</h3>
               <ul class="project-bullets">
-                <li>Autonomous city traffic simulation using node-based route propagation.</li>
-                <li>100% developed from scratch in Unity C#.</li>
-                <li>Real-time dynamic hurdle detection and collision avoidance at varied speeds.</li>
-                <li>Waypoint branching and dynamic lane switching.</li>
+                <li>Autonomous vehicle traffic simulation engineered with node-based waypoint graph route propagation and lane-following algorithms.</li>
+                <li>Dynamic forward raycast obstacle detection and automated collision avoidance with responsive speed throttling at intersections.</li>
+                <li>Waypoint network architecture supporting multi-lane switching, smooth bezier curves, and realistic turning physics.</li>
+                <li>100% natively built from scratch in Unity C# with zero external asset bloat for optimal mobile performance.</li>
               </ul>
               <div class="project-footer">
                 <div class="project-tags">
@@ -614,25 +705,25 @@
             </div>
           </div>
 
-          <!-- 6. Stack Balancer -->
+          <!-- 6. Stack Runner -->
           <div class="project-card" data-category="games, hyper-casual">
             <div class="project-thumb">
-              <span class="project-badge">Procedural Infinite</span>
-              <img src="./assets/images/project-4.png" alt="Stack Balancer" loading="lazy">
+              <span class="project-badge">Hyper Casual Mechanics</span>
+              <img src="./assets/images/project-4.png" alt="Stack Runner Hyper Casual" loading="lazy">
             </div>
             <div class="project-content">
-              <h3 class="project-title">Stack Balancer</h3>
+              <h3 class="project-title">Stack Runner - Collect &amp; Balance</h3>
               <ul class="project-bullets">
-                <li>Hyper-casual balancing game built in Unity C#.</li>
-                <li>Algorithmic procedural level generation creating unlimited levels from 10 core layouts.</li>
-                <li>Responsive mobile touch controls and satisfying physics feedback.</li>
-                <li>100% built from scratch.</li>
+                <li>Hyper-casual runner game featuring dynamic collectible block acquisition and stack elevation mechanics (<code>PickupOnHand.cs</code>, <code>StackUnderChar.cs</code>).</li>
+                <li>Real-time player vertical offset repositioning and procedural stack height calculation on block acquisition.</li>
+                <li>Obstacle collision handling that dynamically slices/drops collected blocks while maintaining smooth runner locomotion (<code>PlayerMovement.cs</code>).</li>
+                <li>Responsive mobile touch swipe steering, smooth rotating item pickups (<code>Gold.cs</code>, <code>TurningPickups.cs</code>), and game-over state loops.</li>
               </ul>
               <div class="project-footer">
                 <div class="project-tags">
                   <span class="project-tag">Hyper-Casual</span>
-                  <span class="project-tag">Procedural Gen</span>
-                  <span class="project-tag">Unity</span>
+                  <span class="project-tag">Physics Stacking</span>
+                  <span class="project-tag">Unity C#</span>
                 </div>
                 <div class="project-links">
                   <a href="https://github.com/Ahmad8i1a1/Stack-Runnner" target="_blank" rel="noopener noreferrer" class="project-btn">
@@ -651,12 +742,12 @@
               <img src="./assets/images/project-7.png" alt="Math Blaster AR" loading="lazy">
             </div>
             <div class="project-content">
-              <h3 class="project-title">Math Blaster (AR)</h3>
+              <h3 class="project-title">Math Blaster - AR Educational Shooter</h3>
               <ul class="project-bullets">
-                <li>Augmented Reality (AR) interactive educational shooter game for students.</li>
-                <li>Players target and shoot correct mathematical solutions floating in 3D AR space.</li>
-                <li>Built 100% from scratch using Unity AR Foundation and C#.</li>
-                <li>Engaging particle effects, audio feedback, and score tracking.</li>
+                <li>Augmented Reality (AR) interactive educational shooter built with Unity AR Foundation and ARKit/ARCore plane detection.</li>
+                <li>3D spatial target spawning and raycast projectile collision mechanics (<code>Bullet.cs</code>, <code>Boundary.cs</code>, <code>CameraRotator.cs</code>).</li>
+                <li>Capsule reward and power-up system (<code>ArmorCapsule.cs</code>, <code>BulletCapsule.cs</code>, <code>HealthCapsule.cs</code>, <code>PowerUpCapsule.cs</code>).</li>
+                <li>Multi-tier enemy AI behaviors (<code>Drone.cs</code>, <code>Crasher.cs</code>, <code>Boopboop.cs</code>, <code>Enemy.cs</code>) tied to arithmetic challenge loops.</li>
               </ul>
               <div class="project-footer">
                 <div class="project-tags">
@@ -674,25 +765,25 @@
             </div>
           </div>
 
-          <!-- 8. Unity Mobile Ads Custom Package -->
+          <!-- 8. Unity Dynamic Ads Remote Config Package -->
           <div class="project-card" data-category="tools">
             <div class="project-thumb">
-              <span class="project-badge">Open Source Package</span>
-              <img src="./assets/images/project-ads-package.jpg" alt="Unity Mobile Ads Custom Package" loading="lazy">
+              <span class="project-badge">Modular Unity Package</span>
+              <img src="./assets/images/project-ads-package.jpg" alt="Unity Dynamic Ads Remote Config Package" loading="lazy">
             </div>
             <div class="project-content">
-              <h3 class="project-title">Unity Mobile Ads Custom Package</h3>
+              <h3 class="project-title">Unity Dynamic Ads Remote Config Package</h3>
               <ul class="project-bullets">
-                <li>Reusable, production-grade Unity monetization architecture.</li>
-                <li>Out-of-the-box support for Google AdMob, Gley, and mediation adapters.</li>
-                <li>Modular wrappers for App Open, Banners, Interstitials, and Rewarded Video.</li>
-                <li>Powers ad monetization across commercial titles with 100k+ downloads.</li>
+                <li>Production-grade Unity monetization package enabling seamless runtime switching between AppLovin MAX and Google AdMob.</li>
+                <li>Remote Config driven: dynamically switch the active ad provider over-the-air without requiring app store updates or recompilation.</li>
+                <li>Unified mediation wrappers for App Open, Banner, Interstitial, and Rewarded Video ad placements.</li>
+                <li>Centralized event callbacks, automated fallback failover handling, and zero downtime during third-party ad network outages.</li>
               </ul>
               <div class="project-footer">
                 <div class="project-tags">
-                  <span class="project-tag">Unity Package</span>
-                  <span class="project-tag">AdMob SDK</span>
-                  <span class="project-tag">Monetization</span>
+                  <span class="project-tag">Remote Config</span>
+                  <span class="project-tag">AppLovin / AdMob</span>
+                  <span class="project-tag">Mediation</span>
                 </div>
                 <div class="project-links">
                   <a href="https://github.com/Ahmad8i1a1/Ads_Custom_Package" target="_blank" rel="noopener noreferrer" class="project-btn">
@@ -745,18 +836,18 @@
               <img src="./assets/images/project-grammar-autocorrect.jpg" alt="NLP Grammar & Autocorrect System" loading="lazy">
             </div>
             <div class="project-content">
-              <h3 class="project-title">NLP Grammar & Autocorrect</h3>
+              <h3 class="project-title">NLP Grammar &amp; Autocorrect Engine</h3>
               <ul class="project-bullets">
-                <li>Natural Language Processing pipeline implemented in Python.</li>
-                <li>Minimum edit distance algorithms combined with vocabulary frequency scoring.</li>
-                <li>Probabilistic language models calculating real-time contextual suggestions.</li>
-                <li>Interactive Jupyter Notebook implementation and evaluation.</li>
+                <li>Natural Language Processing pipeline developed in Python Jupyter Notebook (<code>Grammar_Autocorrect.ipynb</code>).</li>
+                <li>Levenshtein minimum edit distance algorithms (insert, delete, switch, replace operations) generating candidate word permutations.</li>
+                <li>Statistical n-gram language modeling calculating contextual word probabilities across corpus frequencies to select optimal corrections.</li>
+                <li>Rigorous evaluation suite assessing precision against typographical spelling errors and phonetic slips.</li>
               </ul>
               <div class="project-footer">
                 <div class="project-tags">
                   <span class="project-tag">NLP</span>
+                  <span class="project-tag">Levenshtein</span>
                   <span class="project-tag">Python</span>
-                  <span class="project-tag">Algorithms</span>
                 </div>
                 <div class="project-links">
                   <a href="https://github.com/Ahmad8i1a1/Grammar-Autocorrect-" target="_blank" rel="noopener noreferrer" class="project-btn">
@@ -777,10 +868,10 @@
             <div class="project-content">
               <h3 class="project-title">Naive Bayes Text Classifier</h3>
               <ul class="project-bullets">
-                <li>Supervised machine learning pipeline for text categorization & sentiment analysis.</li>
-                <li>Feature extraction with Bag-of-Words and TF-IDF vectorization.</li>
-                <li>Multinomial Naive Bayes probabilistic classification model.</li>
-                <li>Comprehensive evaluation with confusion matrix heatmaps and precision/recall.</li>
+                <li>Supervised machine learning NLP pipeline implemented in Python (<code>text_classification_using_naive_bayes.ipynb</code>).</li>
+                <li>End-to-end text preprocessing: regex tokenization, lowercasing, stopword removal, and TF-IDF feature extraction.</li>
+                <li>Multinomial Naive Bayes probabilistic model training for multi-class document categorization and sentiment analysis.</li>
+                <li>Rigorous performance evaluation with confusion matrix heatmaps, precision, recall, and F1-score benchmarks.</li>
               </ul>
               <div class="project-footer">
                 <div class="project-tags">
@@ -807,10 +898,10 @@
             <div class="project-content">
               <h3 class="project-title">AutoClicker Web Extension</h3>
               <ul class="project-bullets">
-                <li>Web automation extension built with modern JavaScript Manifest V3.</li>
-                <li>Background service worker for precise interval-based DOM targeting.</li>
-                <li>Interactive popup UI for interval configuration, cursor location, and triggers.</li>
-                <li>Streamlined for testing, web scraping, and productivity workflows.</li>
+                <li>Browser automation extension engineered with modern JavaScript Manifest V3 architecture (<code>manifest.json</code>, <code>background.js</code>, <code>popup.js</code>).</li>
+                <li>Background service worker managing asynchronous click timers and cross-tab DOM click dispatch events.</li>
+                <li>Interactive popup UI allowing real-time interval configuration (milliseconds), repeat counters, and element selectors.</li>
+                <li>Streamlined for automated web testing, repetitive workflows, and browser UI regression checks.</li>
               </ul>
               <div class="project-footer">
                 <div class="project-tags">
@@ -927,12 +1018,19 @@
       </div>
     </section>
 
+    <!-- Vector Wave Divider: Projects -> Experience -->
+    <div class="vector-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,50 C240,115 450,-10 650,55 C850,120 1050,15 1200,45 L1200,120 L0,120 Z" fill="#150f28"></path>
+      </svg>
+    </div>
+
     <!-- ==================== EXPERIENCE & TIMELINE ==================== -->
     <section class="section" id="experience">
       <div class="container">
 
         <div class="section-header">
-          <div class="section-tag"><ion-icon name="briefcase-outline" style="vertical-align: -1px; margin-right: 4px;"></ion-icon> Production History</div>
+          <div class="section-tag"><span class="vector-star-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span> Production History</div>
           <h2 class="section-title">Industry Experience &amp; Engineering Roles</h2>
           <p class="section-desc">
             A proven record of engineering scalable backend infrastructure, architecting modular gameplay systems, and shipping commercial titles.
@@ -1095,12 +1193,19 @@
       </div>
     </section>
 
+    <!-- Vector Wave Divider: Experience -> Contact -->
+    <div class="vector-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C180,80 380,-30 550,50 C720,130 940,25 1200,65 L1200,120 L0,120 Z" fill="#1d1637"></path>
+      </svg>
+    </div>
+
     <!-- ==================== CONTACT SECTION ==================== -->
-    <section class="section" id="contact" style="background: rgba(29, 22, 55, 0.7);">
+    <section class="section" id="contact" style="background: #1d1637;">
       <div class="container">
 
         <div class="section-header">
-          <div class="section-tag"><ion-icon name="mail-outline" style="vertical-align: -1px; margin-right: 4px;"></ion-icon> Direct Contact</div>
+          <div class="section-tag"><span class="vector-star-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span> Direct Contact</div>
           <h2 class="section-title">Let's Build Something Great Together</h2>
           <p class="section-desc">
             Whether you need a dedicated Unity game developer, engine systems architect, or performance optimization specialist for your studio, I'm available for production projects and technical collaboration.
@@ -1212,6 +1317,13 @@
       </div>
     </section>
 
+    <!-- Vector Wave Divider: Contact -> Footer -->
+    <div class="vector-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,45 C200,110 420,-10 620,55 C820,125 1040,15 1200,45 L1200,120 L0,120 Z" fill="#0f0a1e"></path>
+      </svg>
+    </div>
+
   </main>
 
   <!-- ==================== FOOTER ==================== -->
@@ -1219,11 +1331,11 @@
     <div class="container footer-wrapper">
       <div class="footer-status">
         <span class="status-dot"></span>
-        <span>Systems Operational // Next-Gen Game & XR Engineering</span>
+        <span>Systems Operational // Next-Gen Game &amp; XR Engineering</span>
       </div>
 
       <div>
-        &copy; 2026 Ahmad Bilal. Engineered with clean architecture & AI.
+        &copy; 2026 Ahmad Bilal. Crafted with modular engine architecture &amp; gameplay passion.
       </div>
     </div>
   </footer>

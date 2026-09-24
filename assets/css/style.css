@@ -1336,6 +1336,148 @@ textarea.form-input {
 }
 
 /*-----------------------------------*\
+  # VECTOR EFFECTS & KING-STYLE MOTIFS
+\*-----------------------------------*/
+
+/* Responsive SVG Vector Section Dividers */
+.vector-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  display: block;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+.vector-divider svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: clamp(34px, 4.5vw, 64px);
+  transition: transform 0.3s ease;
+}
+
+.vector-divider.flip {
+  transform: rotate(180deg);
+}
+
+/* Ambient Floating Vector Game Elements */
+.vector-ambient-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.vector-floating-shape {
+  position: absolute;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.35));
+  will-change: transform;
+  pointer-events: none;
+}
+
+.vector-shape-gem {
+  top: 16%;
+  left: 2.5%;
+  width: clamp(32px, 3.8vw, 52px);
+  height: clamp(32px, 3.8vw, 52px);
+  opacity: 0.75;
+  animation: vectorFloatSlow 8s ease-in-out infinite alternate;
+}
+
+.vector-shape-star1 {
+  top: 28%;
+  right: 3.5%;
+  width: clamp(26px, 3vw, 40px);
+  height: clamp(26px, 3vw, 40px);
+  opacity: 0.8;
+  animation: vectorSparkle 4.5s ease-in-out infinite;
+}
+
+.vector-shape-bubble1 {
+  top: 52%;
+  left: 2%;
+  width: clamp(36px, 4.5vw, 58px);
+  height: clamp(36px, 4.5vw, 58px);
+  opacity: 0.65;
+  animation: vectorFloatMedium 9.5s ease-in-out infinite alternate-reverse;
+}
+
+.vector-shape-star2 {
+  top: 68%;
+  right: 4%;
+  width: clamp(24px, 2.8vw, 36px);
+  height: clamp(24px, 2.8vw, 36px);
+  opacity: 0.75;
+  animation: vectorSparkle 5.5s ease-in-out infinite 2s;
+}
+
+.vector-shape-diamond {
+  top: 84%;
+  left: 4.5%;
+  width: clamp(28px, 3.2vw, 44px);
+  height: clamp(28px, 3.2vw, 44px);
+  opacity: 0.7;
+  animation: vectorFloatSlow 11s ease-in-out infinite alternate;
+}
+
+@keyframes vectorFloatSlow {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-16px) rotate(10deg); }
+  100% { transform: translateY(-32px) rotate(-8deg); }
+}
+
+@keyframes vectorFloatMedium {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-22px) scale(1.06); }
+  100% { transform: translateY(-42px) scale(0.95); }
+}
+
+@keyframes vectorSparkle {
+  0%, 100% { transform: scale(0.85) rotate(0deg); opacity: 0.45; }
+  50% { transform: scale(1.2) rotate(45deg); opacity: 0.95; }
+}
+
+@keyframes vectorMiniPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25) rotate(15deg); }
+}
+
+.vector-star-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--king-yellow);
+  margin-right: 6px;
+  vertical-align: -2px;
+  animation: vectorMiniPulse 3s ease-in-out infinite;
+}
+
+/* King Vector Badge Accent */
+.project-card::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--king-orange);
+  box-shadow: 0 0 10px var(--king-orange);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/*-----------------------------------*\
   # RESPONSIVE BREAKPOINTS
 \*-----------------------------------*/
 
@@ -1357,6 +1499,11 @@ textarea.form-input {
   .cta-btn-desktop {
     display: none;
   }
+
+  .vector-shape-gem,
+  .vector-shape-diamond {
+    display: none; /* Keep screen clean on smaller tablets/mobiles */
+  }
 }
 
 @media (max-width: 640px) {
@@ -1377,5 +1524,9 @@ textarea.form-input {
   .footer-wrapper {
     flex-direction: column;
     text-align: center;
+  }
+
+  .vector-ambient-layer {
+    opacity: 0.45; /* Subtle on mobile devices */
   }
 }

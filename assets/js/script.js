@@ -158,8 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const submitBtn = contactForm.querySelector('.form-submit-btn');
       const originalText = submitBtn.innerHTML;
 
-      submitBtn.innerHTML = '<ion-icon name="checkmark-circle"></ion-icon> <span>Transmission Sent!</span>';
-      submitBtn.style.background = 'linear-gradient(135deg, #00f5a0 0%, #00f0ff 100%)';
+      submitBtn.innerHTML = '<ion-icon name="checkmark-circle"></ion-icon> <span>Message Sent!</span>';
+      submitBtn.style.background = 'linear-gradient(135deg, #00b67d 0%, #02d18f 100%)';
 
       setTimeout(() => {
         contactForm.reset();
