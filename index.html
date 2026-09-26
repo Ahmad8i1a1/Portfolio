@@ -121,7 +121,7 @@
         <div class="home__image">
           <div class="blob-animate"></div>
           <div class="home__profile-wrapper">
-            <img src="./assets/images/ghibli-avatar.jpg" alt="Ahmad Bilal - Unity Game Developer (Studio Ghibli Style)" class="home__profile" />
+            <img src="./assets/images/profile-pro.jpg" alt="Ahmad Bilal - Professional Unity Game Developer & AI Systems Engineer" class="home__profile" />
           </div>
         </div>
       </div>
@@ -135,7 +135,7 @@
           <div class="blob-animate"></div>
           <div class="blob-animate"></div>
           <div class="about__profile-card">
-            <img src="./assets/images/ghibli-about.jpg" alt="Ahmad Bilal Game Studio Workspace (Studio Ghibli Style)" class="about__profile" loading="lazy" />
+            <img src="./assets/images/profile-about.jpg" alt="Ahmad Bilal - Unity Game Developer & AI Systems Engineer" class="about__profile" loading="lazy" />
           </div>
         </div>
 
@@ -940,23 +940,7 @@
               </ul>
             </div>
 
-            <!-- 3. SpeakBetter -->
-            <div class="work__card">
-              <div class="work__marker"></div>
-              <div class="work__header">
-                <div>
-                  <h3 class="work__role">Unity & AI Developer</h3>
-                  <p class="work__company">SpeakBetter</p>
-                </div>
-                <span class="work__year">Feb 2024 - Jun 2024</span>
-              </div>
-              <ul class="work__bullets">
-                <li>Integrated speech recognition and NLP fluency scoring models into interactive mobile learning environments.</li>
-                <li>Developed low-latency audio processing pipelines providing real-time visual pronunciation feedback to users.</li>
-              </ul>
-            </div>
-
-            <!-- 4. Numzz Tech -->
+            <!-- 3. Numzz Tech -->
             <div class="work__card">
               <div class="work__marker"></div>
               <div class="work__header">
@@ -1187,23 +1171,6 @@
               "Ahmad transformed our vehicle parking project by building 75 intricate levels and a full city scene. Reliable, fast, and proactive in solving simulation bugs."
             </p>
           </article>
-
-          <article class="testimonials__card">
-            <div class="testimonials__header">
-              <div class="testimonials__avatar">SB</div>
-              <div>
-                <h4 class="testimonials__name">Tech Lead</h4>
-                <p class="testimonials__role">SpeakBetter</p>
-              </div>
-            </div>
-            <div class="testimonials__rating">
-              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-            </div>
-            <p class="testimonials__quote">
-              "Ahmad's integration of speech recognition and low-latency audio pipelines into Unity was flawless. A talented developer who blends game feel with AI."
-            </p>
-          </article>
-
         </div>
       </div>
     </section>
@@ -1255,6 +1222,66 @@
             </a>
           </div>
 
+        </div>
+
+        <!-- DIRECT GOOGLE FORM INTEGRATION -->
+        <div class="contact__form-wrapper">
+          <div class="contact__form-header">
+            <h3 class="contact__form-title">Send a Direct Message</h3>
+            <p class="contact__form-subtitle">Connected directly to Google Drive. Drop a message for game projects, monetization, or tech opportunities.</p>
+          </div>
+
+          <!-- Hidden iframe to process Google Form submission silently without navigating away -->
+          <iframe name="google_form_iframe" id="google_form_iframe" style="display:none;" onload="if(window.googleFormSubmitted){window.handleGoogleFormSuccess();}"></iframe>
+
+          <form action="https://docs.google.com/forms/d/e/1FAIpQLSe55Agy-3Wq7WduiUb6G98gncAUvq3m37LiiQt3lOJzGf3sGw/formResponse" method="POST" target="google_form_iframe" class="contact__form" id="portfolio-contact-form">
+            <div class="form__grid">
+              <div class="form__group">
+                <label class="form__label" for="form-name">Full Name *</label>
+                <div class="form__input-wrapper">
+                  <i class="ri-user-line form__icon"></i>
+                  <input type="text" id="form-name" name="entry.2005620554" class="form__input" placeholder="e.g. Alex Hunter" required />
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="form-email">Email Address *</label>
+                <div class="form__input-wrapper">
+                  <i class="ri-mail-line form__icon"></i>
+                  <input type="email" id="form-email" name="entry.1045781291" class="form__input" placeholder="alex@studio.com" required />
+                </div>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="form-subject">Subject / Project Category</label>
+              <div class="form__input-wrapper">
+                <i class="ri-folder-open-line form__icon"></i>
+                <select id="form-subject" class="form__input form__select">
+                  <option value="Commercial Game Development">Commercial Game Development (Unity C#)</option>
+                  <option value="Ad Mediation Pipeline">Ad Mediation & Remote Config Pipeline</option>
+                  <option value="Azure PlayFab Backend">Microsoft Azure PlayFab Cloud Backend</option>
+                  <option value="Game AI & Mechanics">Game AI Systems & Gameplay Mechanics</option>
+                  <option value="Full-Time / Contract Role">Full-Time / Contract Role</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="form-message">Your Message *</label>
+              <div class="form__input-wrapper">
+                <i class="ri-chat-1-line form__icon form__icon--textarea"></i>
+                <textarea id="form-message" name="entry.839337160" class="form__input form__textarea" rows="4" placeholder="Briefly describe your game concept, requirements, target platforms, or questions..." required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="button form__submit-btn" id="form-submit-btn">
+              <span>Send Message to Drive</span> <i class="ri-send-plane-fill"></i>
+            </button>
+
+            <div class="form__status" id="form-status-alert"></div>
+          </form>
         </div>
 
       </div>

@@ -241,6 +241,84 @@ document.addEventListener('DOMContentLoaded', () => {
     sr.reveal('.services__card', { interval: 150 });
     sr.reveal('.testimonials__container', { origin: 'bottom' });
     sr.reveal('.contact__box', { interval: 150 });
+    sr.reveal('.contact__form-wrapper', { origin: 'bottom', delay: 300 });
+  }
+
+  /* 12. Direct Google Form Submission & Drive Sync */
+  const contactForm = document.getElementById('portfolio-contact-form');
+  const formSubmitBtn = document.getElementById('form-submit-btn');
+  const formStatusAlert = document.getElementById('form-status-alert');
+  const formSubject = document.getElementById('form-subject');
+  const formMessage = document.getElementById('form-message');
+
+  window.handleGoogleFormSuccess = () => {
+    if (formSubmitBtn) {
+      formSubmitBtn.disabled = false;
+      formSubmitBtn.innerHTML = `<span>Sent to Google Drive!</span> <i class="ri-checkbox-circle-fill"></i>`;
+      formSubmitBtn.style.background = 'linear-gradient(60deg, #10b981 0%, #059669 100%)';
+    }
+    if (formStatusAlert) {
+      formStatusAlert.className = 'form__status success';
+      formStatusAlert.innerHTML = `<i class="ri-checkbox-circle-fill"></i> Thank you! Your message was submitted directly and recorded in my Google Drive Sheet.`;
+      formStatusAlert.style.display = 'block';
+    }
+    if (contactForm) {
+      contactForm.reset();
+    }
+    setTimeout(() => {
+      if (formSubmitBtn) {
+        formSubmitBtn.innerHTML = `<span>Send Message to Drive</span> <i class="ri-send-plane-fill"></i>`;
+        formSubmitBtn.style.background = '';
+      }
+    }, 4500);
+  };
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', () => {
+      // Prepend selected category to message for clear recording in Google Sheets
+      if (formSubject && formMessage) {
+        const subjectVal = formSubject.value;
+        const currentMsg = formMessage.value.trim();
+        if (subjectVal && !currentMsg.startsWith('[Category:')) {
+          formMessage.value = `[Category: ${subjectVal}]\n\n${currentMsg}`;
+        }
+      }
+
+      window.googleFormSubmitted = true;
+      if (formSubmitBtn) {
+        formSubmitBtn.disabled = true;
+        formSubmitBtn.innerHTML = `<span>Sending to Google Drive...</span> <i class="ri-loader-4-line ri-spin"></i>`;
+      }
+      if (formStatusAlert) {
+        formStatusAlert.className = 'form__status';
+        formStatusAlert.style.display = 'none';
+      }
+
+      // Trigger background no-cors fetch alongside iframe post for redundancy
+      try {
+        const formData = new FormData(contactForm);
+        fetch(contactForm.action, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: formData
+        }).then(() => {
+          setTimeout(() => {
+            if (window.googleFormSubmitted) {
+              window.handleGoogleFormSuccess();
+              window.googleFormSubmitted = false;
+            }
+          }, 500);
+        }).catch(() => {});
+      } catch (e) {}
+
+      // Safety fallback timer if iframe onload or network takes longer
+      setTimeout(() => {
+        if (window.googleFormSubmitted) {
+          window.handleGoogleFormSuccess();
+          window.googleFormSubmitted = false;
+        }
+      }, 1500);
+    });
   }
 
 });
