@@ -1,27 +1,29 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..800;1,300..800&family=Unbounded:wght@300..900&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
+/*=============== FRAG GAMES COLOR SCHEME & VARIABLES ===============*/
 :root {
-  --header-height: 4rem;
+  --header-height: 4.25rem;
 
-  /*========== Colors (Electric Violet / Purple Palette) ==========*/
-  --hue: 258;
-  --first-color: hsl(var(--hue), 70%, 65%);
-  --first-color-alt: hsl(var(--hue), 85%, 58%);
-  --first-color-alt-2: hsl(var(--hue), 65%, 52%);
-  --first-color-light: hsl(var(--hue), 75%, 78%);
-  --first-color-glow: hsla(var(--hue), 80%, 65%, 0.45);
+  /*========== Frag Games Official Palette (https://www.frag-games.com/) ==========*/
+  /* Frag Orange primary with Crimson-to-Orange energy gradients and dark obsidian canvas */
+  --first-color: #ff7426;
+  --first-color-alt: #ff5500;
+  --first-color-alt-2: #da0820;
+  --first-color-light: #ffa166;
+  --first-color-glow: rgba(255, 116, 38, 0.45);
+  --first-gradient: linear-gradient(60deg, #da0820 0%, #ff7426 100%);
 
-  --title-color: hsl(240, 8%, 96%);
-  --text-color: hsl(240, 8%, 75%);
-  --text-color-light: hsl(240, 8%, 55%);
-  --body-color: hsl(245, 25%, 3%);
-  --container-color: hsl(245, 18%, 7%);
-  --container-color-alt: hsl(245, 16%, 10%);
-  --border-color: hsla(240, 8%, 100%, 0.08);
+  --title-color: #ffffff;
+  --text-color: #d1d5db;
+  --text-color-light: #9ca3af;
+  --body-color: #070a0e;
+  --container-color: #0e1319;
+  --container-color-alt: #161e27;
+  --border-color: #262b30;
+  --border-color-light: #3c4146;
 
-  /*========== Font and Typography ==========*/
+  /*========== Typography ==========*/
   --body-font: "Montserrat", sans-serif;
   --second-font: "Unbounded", sans-serif;
 
@@ -68,6 +70,16 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--first-color);
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: var(--first-color);
+  color: #fff;
 }
 
 body,
@@ -128,7 +140,7 @@ img {
 }
 
 .section {
-  padding-block: 4rem 2rem;
+  padding-block: 4.5rem 2.5rem;
   position: relative;
 }
 
@@ -148,20 +160,21 @@ img {
   overflow: hidden;
 }
 
-/*=============== AMBIENT BLOBS ===============*/
+/*=============== AMBIENT FRAG BLOBS ===============*/
 .blob-animate {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   background: linear-gradient(
     180deg,
-    var(--first-color-alt) 20%,
-    var(--first-color-light) 100%
+    var(--first-color-alt-2) 0%,
+    var(--first-color) 100%
   );
   border-radius: 50%;
   position: absolute;
-  filter: blur(45px);
+  filter: blur(50px);
   z-index: -1;
   pointer-events: none;
+  opacity: 0.55;
   animation: animateBlob 7s linear infinite;
 }
 
@@ -170,7 +183,7 @@ img {
     transform: rotate(0deg) scale(1);
   }
   50% {
-    transform: rotate(180deg) scale(1.15);
+    transform: rotate(180deg) scale(1.2);
   }
   100% {
     transform: rotate(360deg) scale(1);
@@ -178,15 +191,15 @@ img {
 }
 
 .blob {
-  width: 260px;
-  height: 260px;
+  width: 280px;
+  height: 280px;
   background: linear-gradient(
     180deg,
     var(--first-color) 0%,
-    var(--first-color-alt) 100%
+    var(--first-color-alt-2) 100%
   );
   border-radius: 50%;
-  filter: blur(60px);
+  filter: blur(70px);
   position: absolute;
   z-index: -1;
   pointer-events: none;
@@ -196,8 +209,8 @@ img {
 .blob-2 {
   background: linear-gradient(
     180deg,
-    hsl(190, 80%, 55%) 0%,
-    var(--first-color) 100%
+    var(--first-color-alt-2) 0%,
+    #ff9900 100%
   );
 }
 
@@ -207,9 +220,9 @@ img {
   left: 0;
   top: 0;
   z-index: 9999;
-  width: 38px;
-  height: 38px;
-  background-color: var(--first-color-light);
+  width: 34px;
+  height: 34px;
+  background-color: var(--first-color);
   border-radius: 50%;
   box-shadow: 0 0 25px var(--first-color);
   mix-blend-mode: difference;
@@ -228,15 +241,15 @@ img {
   opacity: 0;
 }
 
-/*=============== BUTTONS ===============*/
+/*=============== FRAG GAMES BUTTONS ===============*/
 .button {
-  background-color: var(--container-color);
-  border: 2px solid var(--first-color);
-  color: var(--title-color);
+  background: var(--first-gradient);
+  border: 1px solid var(--first-color);
+  color: #ffffff;
   padding: 0.9rem 2.2rem;
   box-shadow:
-    0 8px 30px hsla(var(--hue), 65%, 60%, 0.35),
-    inset 4px -4px 20px var(--first-color-alt-2);
+    0 8px 30px rgba(255, 116, 38, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.35);
   border-radius: 4rem;
   font-family: var(--second-font);
   font-size: var(--small-font-size);
@@ -257,8 +270,8 @@ img {
 .button:hover {
   transform: translateY(-3px);
   box-shadow:
-    0 12px 40px hsla(var(--hue), 75%, 65%, 0.55),
-    inset 6px -6px 25px var(--first-color-alt-2);
+    0 12px 42px rgba(255, 116, 38, 0.65),
+    inset 0 1px 4px rgba(255, 255, 255, 0.5);
   color: #fff;
 }
 
@@ -272,14 +285,14 @@ img {
 
 .button--ghost {
   background: transparent;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color-light);
   box-shadow: none;
   color: var(--text-color);
 }
 
 .button--ghost:hover {
   border-color: var(--first-color);
-  color: var(--title-color);
+  color: #fff;
   box-shadow: 0 4px 20px var(--first-color-glow);
 }
 
@@ -289,15 +302,12 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    180deg,
-    hsla(245, 25%, 3%, 0.95) 70%,
-    hsla(245, 25%, 3%, 0) 100%
-  );
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(7, 10, 14, 0.92);
+  border-bottom: 2px solid var(--first-color);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   z-index: var(--z-fixed);
-  transition: background 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .nav {
@@ -310,16 +320,17 @@ img {
 .nav__logo {
   font-family: var(--second-font);
   font-weight: var(--font-bold);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--title-color);
   display: inline-flex;
   align-items: center;
-  column-gap: 0.4rem;
+  column-gap: 0.45rem;
   transition: color 0.3s;
 }
 
 .nav__logo span {
   color: var(--first-color);
+  text-shadow: 0 0 15px var(--first-color-glow);
 }
 
 .nav__logo:hover {
@@ -370,7 +381,8 @@ img {
     max-width: 320px;
     height: 100vh;
     background-color: var(--container-color);
-    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.6);
+    border-left: 2px solid var(--first-color);
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.8);
     padding: 6rem 2.5rem 3rem;
     transition: right 0.4s ease;
     z-index: var(--z-fixed);
@@ -399,7 +411,7 @@ img {
     top: 1.5rem;
     right: 1.5rem;
     font-size: 1.5rem;
-    color: var(--title-color);
+    color: var(--first-color);
     cursor: pointer;
   }
 
@@ -456,24 +468,24 @@ img {
 }
 
 .home__image .blob-animate {
-  width: 260px;
-  height: 260px;
-  filter: blur(50px);
+  width: 270px;
+  height: 270px;
+  filter: blur(55px);
 }
 
 .home__profile-wrapper {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   padding: 8px;
   background: linear-gradient(
     135deg,
     var(--first-color) 0%,
-    transparent 60%,
-    var(--first-color-alt) 100%
+    transparent 50%,
+    var(--first-color-alt-2) 100%
   );
-  box-shadow: 0 0 40px var(--first-color-glow);
+  box-shadow: 0 0 45px var(--first-color-glow);
 }
 
 .home__profile {
@@ -515,14 +527,22 @@ img {
 }
 
 .home__stat-card {
-  background: var(--container-color);
+  background: linear-gradient(0deg, #182028 -20%, #070a0e 25%);
   border: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
   border-radius: 1.5rem;
   padding: 0.75rem 1.25rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.home__stat-card:hover {
+  border-color: var(--first-color);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px var(--first-color-glow);
 }
 
 .home__stat-number {
@@ -570,7 +590,7 @@ img {
 
 .home__social-link:hover {
   color: #fff;
-  background-color: var(--first-color-alt);
+  background: var(--first-gradient);
   border-color: var(--first-color);
   box-shadow: 0 0 20px var(--first-color-glow);
   transform: translateY(-3px);
@@ -605,8 +625,14 @@ img {
   border-radius: 2.5rem;
   overflow: hidden;
   border: 1px solid var(--border-color);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
-  max-width: 400px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+  max-width: 420px;
+  transition: all 0.4s ease;
+}
+
+.about__profile-card:hover {
+  border-color: var(--first-color);
+  box-shadow: 0 20px 50px var(--first-color-glow);
 }
 
 .about__data {
@@ -632,8 +658,9 @@ img {
 }
 
 .about__highlight-box {
-  background: var(--container-color);
+  background: linear-gradient(0deg, #182028 -20%, #070a0e 25%);
   border: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
   border-radius: 1.25rem;
   padding: 1.25rem 1rem;
   text-align: center;
@@ -688,7 +715,7 @@ img {
 .projects__filter-btn:hover,
 .projects__filter-btn.active {
   color: #fff;
-  background-color: var(--first-color-alt);
+  background: var(--first-gradient);
   border-color: var(--first-color);
   box-shadow: 0 4px 20px var(--first-color-glow);
 }
@@ -700,13 +727,14 @@ img {
 }
 
 .projects__card {
-  background: var(--container-color);
+  background: linear-gradient(0deg, #182028 -20%, #070a0e 25%);
   border: 1px solid var(--border-color);
-  border-radius: 2.5rem;
+  border-bottom: 2px solid var(--border-color);
+  border-radius: 2.25rem;
   padding: 1.75rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -730,7 +758,7 @@ img {
 .projects__number h1 {
   font-size: 1.75rem;
   color: var(--first-color);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .projects__badge {
@@ -739,27 +767,27 @@ img {
   font-weight: var(--font-semi-bold);
   padding: 0.35rem 0.85rem;
   border-radius: 2rem;
-  background: hsla(var(--hue), 80%, 55%, 0.15);
+  background: rgba(255, 116, 38, 0.12);
   color: var(--first-color-light);
-  border: 1px solid hsla(var(--hue), 80%, 55%, 0.3);
+  border: 1px solid rgba(255, 116, 38, 0.3);
 }
 
 .projects__badge.sabasoft {
-  background: hsla(280, 80%, 55%, 0.15);
-  color: hsl(280, 80%, 75%);
-  border-color: hsla(280, 80%, 55%, 0.3);
+  background: rgba(218, 8, 32, 0.15);
+  color: #ff8591;
+  border-color: rgba(218, 8, 32, 0.35);
 }
 
 .projects__badge.numzz {
-  background: hsla(160, 80%, 45%, 0.15);
-  color: hsl(160, 80%, 70%);
-  border-color: hsla(160, 80%, 45%, 0.3);
+  background: rgba(45, 179, 102, 0.15);
+  color: #5ce698;
+  border-color: rgba(45, 179, 102, 0.35);
 }
 
 .projects__badge.codekrux {
-  background: hsla(210, 80%, 55%, 0.15);
-  color: hsl(210, 80%, 75%);
-  border-color: hsla(210, 80%, 55%, 0.3);
+  background: rgba(255, 116, 38, 0.15);
+  color: #ffa166;
+  border-color: rgba(255, 116, 38, 0.35);
 }
 
 .projects__data {
@@ -809,6 +837,7 @@ img {
   margin-top: 0.5rem;
   aspect-ratio: 16 / 9;
   background-color: var(--container-color-alt);
+  border: 1px solid var(--border-color);
 }
 
 .projects__img {
@@ -835,7 +864,7 @@ img {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: hsla(245, 25%, 3%, 0.85);
+  background: rgba(7, 10, 14, 0.88);
   border: 1px solid var(--border-color);
   backdrop-filter: blur(8px);
   color: #fff;
@@ -877,8 +906,9 @@ img {
 }
 
 .projects__grid-card {
-  background: var(--container-color);
+  background: linear-gradient(0deg, #182028 -20%, #070a0e 25%);
   border: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
   border-radius: 2rem;
   padding: 1.5rem;
   display: flex;
@@ -934,7 +964,7 @@ img {
 .work__button:hover,
 .work__button.work-active {
   color: #fff;
-  background-color: var(--first-color-alt);
+  background: var(--first-gradient);
   border-color: var(--first-color);
   box-shadow: 0 6px 25px var(--first-color-glow);
 }
@@ -969,11 +999,12 @@ img {
 
 .work__card {
   position: relative;
-  background: var(--container-color);
+  background: linear-gradient(0deg, #182028 -20%, #070a0e 25%);
   border: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
   border-radius: 2rem;
   padding: 2rem;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
 }
 
@@ -1055,13 +1086,14 @@ img {
 }
 
 .services__card {
-  background: var(--container-color);
+  background: linear-gradient(0deg, #182028 -20%, #070a0e 25%);
   border: 1px solid var(--border-color);
-  border-radius: 2.5rem;
+  border-bottom: 2px solid var(--border-color);
+  border-radius: 2.25rem;
   padding: 2.5rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1197,15 +1229,16 @@ img {
 .testimonials__card {
   width: 340px;
   flex-shrink: 0;
-  background: var(--container-color);
+  background: linear-gradient(0deg, #182028 -20%, #070a0e 25%);
   border: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
   border-radius: 2.25rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   row-gap: 1.25rem;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
 .testimonials__header {
@@ -1218,7 +1251,7 @@ img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: var(--first-color-alt);
+  background: var(--first-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1238,7 +1271,7 @@ img {
 }
 
 .testimonials__rating {
-  color: #ffc107;
+  color: #ff7426;
   font-size: 0.85rem;
   display: flex;
   align-items: center;
@@ -1281,8 +1314,9 @@ img {
 }
 
 .contact__box {
-  background: var(--container-color);
+  background: linear-gradient(0deg, #182028 -20%, #070a0e 25%);
   border: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
   border-radius: 2rem;
   padding: 2rem;
   text-align: center;
@@ -1334,6 +1368,7 @@ img {
   padding-block: 2.5rem;
   text-align: center;
   position: relative;
+  background-color: var(--body-color);
 }
 
 .footer__copy {
