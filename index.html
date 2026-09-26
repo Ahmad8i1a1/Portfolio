@@ -1,1535 +1,1284 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahmad Bilal | Game Developer, XR & AI Systems Architect</title>
-  <meta name="description" content="Portfolio of Ahmad Bilal - Unity Game Developer, XR Specialist, and AI Systems Architect with 16+ shipped titles, extreme optimization, and modern AI development pipelines.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmad Bilal | Unity Game Developer & AI Systems Engineer</title>
+  <meta name="description" content="Portfolio of Ahmad Bilal - Unity Game Developer & AI Systems Engineer. Shipped 10+ commercial games, ad mediation pipelines, Azure PlayFab backends, and game AI." />
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon" />
 
-  <!-- Google Fonts: Outfit (Game Studio Display), Plus Jakarta Sans, JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- GOOGLE FONTS (Unbounded & Montserrat) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..800;1,300..800&family=Unbounded:wght@300..900&display=swap" rel="stylesheet" />
 
-  <!-- Custom Futuristic CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- REMIXICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
 
-  <!-- Ionicons -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- SWIPER CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- MAIN STYLESHEET -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
 
-  <!-- Ambient Floating Vector Game Elements (King.com Style) -->
-  <div class="vector-ambient-layer" aria-hidden="true">
-    <!-- 1. Playful Vector Gem / Droplet -->
-    <div class="vector-floating-shape vector-shape-gem">
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="gemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#ff8533"/>
-            <stop offset="60%" stop-color="#ff6a00"/>
-            <stop offset="100%" stop-color="#c94f00"/>
-          </linearGradient>
-        </defs>
-        <path d="M32 4L58 20V44L32 60L6 44V20L32 4Z" fill="url(#gemGrad)" stroke="#ffc200" stroke-width="2"/>
-        <path d="M32 12L50 24V40L32 52L14 40V24L32 12Z" fill="rgba(255,255,255,0.18)"/>
-        <circle cx="26" cy="22" r="4" fill="rgba(255,255,255,0.65)"/>
-      </svg>
-    </div>
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor"></div>
 
-    <!-- 2. Sparkling 4-Point Starburst (Gold / Mint) -->
-    <div class="vector-floating-shape vector-shape-star1">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="starGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#fffa88"/>
-            <stop offset="100%" stop-color="#ffc200"/>
-          </linearGradient>
-        </defs>
-        <path d="M24 0L27.5 16.5L44 24L27.5 31.5L24 48L20.5 31.5L4 24L20.5 16.5L24 0Z" fill="url(#starGrad1)"/>
-        <circle cx="24" cy="24" r="3" fill="#ffffff"/>
-      </svg>
-    </div>
-
-    <!-- 3. Organic Translucent Game Bubble -->
-    <div class="vector-floating-shape vector-shape-bubble1">
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="bubbleGrad1" cx="35%" cy="30%" r="65%">
-            <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
-            <stop offset="40%" stop-color="rgba(0,182,125,0.3)"/>
-            <stop offset="100%" stop-color="rgba(0,182,125,0.05)"/>
-          </radialGradient>
-        </defs>
-        <circle cx="32" cy="32" r="30" fill="url(#bubbleGrad1)" stroke="rgba(0,182,125,0.4)" stroke-width="2"/>
-        <ellipse cx="23" cy="21" rx="8" ry="4" transform="rotate(-30 23 21)" fill="rgba(255,255,255,0.7)"/>
-      </svg>
-    </div>
-
-    <!-- 4. Sparkling Starburst 2 (Mint / Neon) -->
-    <div class="vector-floating-shape vector-shape-star2">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M24 2L28 18L44 24L28 30L24 46L20 30L4 24L20 18L24 2Z" fill="#00b67d"/>
-        <circle cx="24" cy="24" r="3" fill="#ffffff"/>
-      </svg>
-    </div>
-
-    <!-- 5. Floating Vector Game Diamond -->
-    <div class="vector-floating-shape vector-shape-diamond">
-      <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="diamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#ff2a85"/>
-            <stop offset="100%" stop-color="#7928ca"/>
-          </linearGradient>
-        </defs>
-        <rect x="27" y="3" width="34" height="34" rx="7" transform="rotate(45 27 3)" fill="url(#diamGrad)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-        <circle cx="27" cy="27" r="5" fill="rgba(255,255,255,0.5)"/>
-      </svg>
-    </div>
-  </div>
-
-  <!-- ==================== HEADER & NAVBAR ==================== -->
-  <header class="header">
-    <div class="container nav-wrapper">
-
-      <a href="#about" class="brand-logo">
-        <img src="./assets/images/my-avatar.png" alt="Ahmad Bilal" class="brand-avatar">
-        <div class="brand-text">
-          <span class="brand-name">Ahmad Bilal <span class="brand-tag">// Dev</span></span>
-          <span class="brand-sub">Unity &amp; Game Systems Engineer</span>
-        </div>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="blob-animate" style="top: -2rem; left: -2rem;"></div>
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">
+        <i class="ri-gamepad-line"></i> Ahmad<span>Bilal</span>
       </a>
 
-      <!-- Desktop Navigation Menu -->
-      <nav class="nav-menu">
-        <a href="#about" class="nav-link active">About</a>
-        <a href="#ai-stack" class="nav-link">AI &amp; Tooling</a>
-        <a href="#services" class="nav-link">Capabilities</a>
-        <a href="#projects" class="nav-link">Games &amp; Projects</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-
-      <!-- Desktop Right Actions -->
-      <div class="nav-actions">
-        <a href="#contact" class="cta-btn cta-btn-desktop">
-          <ion-icon name="game-controller-outline"></ion-icon>
-          <span>Let's Talk</span>
-        </a>
-
-        <!-- Mobile Toggle Button -->
-        <button class="nav-toggle-btn" aria-label="Toggle Menu">
-          <ion-icon name="menu-outline"></ion-icon>
-        </button>
+      <div class="nav__menu" id="nav__menu">
+        <i class="ri-close-line nav__close" id="nav-close"></i>
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link active-link">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#experience" class="nav__link">Experience</a></li>
+          <li><a href="#services" class="nav__link">Offerings</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
       </div>
 
-    </div>
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-4-line"></i>
+      </div>
+    </nav>
   </header>
 
-  <!-- Mobile Drawer Navigation -->
-  <div class="mobile-overlay"></div>
-  <aside class="mobile-nav">
-    <div>
-      <div class="mobile-nav-top">
-        <div class="brand-text">
-          <span class="brand-name">Ahmad Bilal</span>
-          <span class="brand-sub">Unity &amp; Game Systems Engineer</span>
-        </div>
-        <button class="mobile-close-btn" aria-label="Close Menu">
-          <ion-icon name="close-outline"></ion-icon>
-        </button>
-      </div>
+  <!-- MAIN -->
+  <main class="main">
 
-      <nav class="mobile-links">
-        <a href="#about" class="mobile-nav-link active">
-          <span>About Developer</span>
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-        <a href="#ai-stack" class="mobile-nav-link">
-          <span>AI as a Superpower</span>
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-        <a href="#services" class="mobile-nav-link">
-          <span>Game Dev Capabilities</span>
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-        <a href="#projects" class="mobile-nav-link">
-          <span>Games &amp; Projects</span>
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-        <a href="#experience" class="mobile-nav-link">
-          <span>Work Experience</span>
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-        <a href="#contact" class="mobile-nav-link">
-          <span>Contact Direct</span>
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-      </nav>
-    </div>
+    <!-- HOME / HERO -->
+    <section class="home section" id="home">
+      <div class="blob" style="top: 10%; right: 5%;"></div>
+      <div class="home__container container grid">
+        <div class="home__data">
+          <h3 class="home__greeting">Hello, I'm</h3>
+          <h1 class="home__name">
+            Ahmad <br />
+            <span>Bilal</span>
+          </h1>
 
-    <div>
-      <a href="https://drive.google.com/file/d/17HbJgZmQVOMH9lFsLAprEFYtj2eVtxd6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cta-btn" style="width: 100%; justify-content: center; margin-bottom: 14px;">
-        <ion-icon name="document-text-outline"></ion-icon>
-        <span>Download Resume</span>
-      </a>
-      <div class="social-links" style="justify-content: center;">
-        <a href="https://github.com/Ahmad8i1a1" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-        <a href="https://www.linkedin.com/in/ahmad8i1a1/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-        <a href="https://wa.me/923039965869" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp">
-          <ion-icon name="logo-whatsapp"></ion-icon>
-        </a>
-      </div>
-    </div>
-  </aside>
+          <div class="home__info">
+            <h3 class="home__split">Creative & Technical</h3>
+            <h2 class="home__profession-1">Unity Game Developer</h2>
+            <h2 class="home__profession-2">& AI Systems Engineer</h2>
+          </div>
 
-  <main>
+          <div class="home__stats">
+            <div class="home__stat-card">
+              <span class="home__stat-number">10+</span>
+              <span class="home__stat-label">Commercial<br />Titles</span>
+            </div>
+            <div class="home__stat-card">
+              <span class="home__stat-number">100K+</span>
+              <span class="home__stat-label">Player<br />Downloads</span>
+            </div>
+            <div class="home__stat-card">
+              <span class="home__stat-number">9+</span>
+              <span class="home__stat-label">Ad Mediation<br />Pipelines</span>
+            </div>
+            <div class="home__stat-card">
+              <span class="home__stat-number">4+</span>
+              <span class="home__stat-label">Years Unity<br />Production</span>
+            </div>
+          </div>
 
-    <!-- ==================== HERO SECTION & HUD ==================== -->
-    <section class="hero" id="about">
-      <div class="container">
+          <div class="home__actions">
+            <a href="#projects" class="button">
+              Explore Work <i class="ri-arrow-right-up-line"></i>
+            </a>
+            <a href="https://github.com/Ahmad8i1a1" target="_blank" rel="noopener noreferrer" class="button button--ghost">
+              GitHub Profile <i class="ri-github-line"></i>
+            </a>
+          </div>
 
-        <div class="status-pill">
-          <span class="status-dot"></span>
-          <span><ion-icon name="game-controller-outline" style="vertical-align: -1px; margin-right: 4px;"></ion-icon> Unity Game Developer &amp; Systems Engineer &bull; Available for Studio Projects</span>
+          <div class="home__social">
+            <a href="https://github.com/Ahmad8i1a1" target="_blank" rel="noopener noreferrer" class="home__social-link" title="GitHub">
+              <i class="ri-github-line"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ahmad-bilal-300405225/" target="_blank" rel="noopener noreferrer" class="home__social-link" title="LinkedIn">
+              <i class="ri-linkedin-fill"></i>
+            </a>
+            <a href="https://wa.me/923091016766" target="_blank" rel="noopener noreferrer" class="home__social-link" title="WhatsApp">
+              <i class="ri-whatsapp-line"></i>
+            </a>
+            <a href="mailto:ahmadbilalmuhammadashraf@gmail.com" class="home__social-link" title="Email">
+              <i class="ri-mail-line"></i>
+            </a>
+          </div>
         </div>
 
-        <h1 class="hero-title">
-          Engineering High-Framerate Gameplay, <span class="text-gradient">Modular C# Architecture</span> &amp; Scalable Game Backends.
-        </h1>
-
-        <p class="hero-subtitle">
-          Hi, I'm <b>Ahmad Bilal</b> — a Unity Game Developer and Systems Engineer with <b>15+ shipped titles and technical prototypes</b> across mobile, PC, and consoles. I specialize in decoupled ScriptableObject architecture, sub-millisecond physics, mobile memory profiling (RenderDoc / Unity Profiler), and ultra-low-cost hybrid backends (PlayFab + Firebase). I leverage modern AI tooling (in-engine MCP) as an engineering force multiplier to audit code and eradicate boilerplate without sacrificing developer craftsmanship.
-        </p>
-
-        <!-- Game Dev Core Tech Bar -->
-        <div class="hero-tech-pills">
-          <span class="tech-tag"><ion-icon name="logo-unity"></ion-icon> Unity 6 / LTS</span>
-          <span class="tech-tag"><ion-icon name="code-slash-outline"></ion-icon> C# &amp; IL2CPP</span>
-          <span class="tech-tag"><ion-icon name="cloudy-outline"></ion-icon> Azure PlayFab</span>
-          <span class="tech-tag"><ion-icon name="flame-outline"></ion-icon> Firebase Realtime</span>
-          <span class="tech-tag"><ion-icon name="speedometer-outline"></ion-icon> RenderDoc Profiling</span>
-          <span class="tech-tag"><ion-icon name="cash-outline"></ion-icon> AdMob Mediation</span>
-          <span class="tech-tag"><ion-icon name="cube-outline"></ion-icon> Procedural Physics</span>
-          <span class="tech-tag"><ion-icon name="hardware-chip-outline"></ion-icon> In-Engine MCP</span>
+        <div class="home__image">
+          <div class="blob-animate"></div>
+          <div class="home__profile-wrapper">
+            <img src="./assets/images/my-avatar.png" alt="Ahmad Bilal - Unity Game Developer" class="home__profile" />
+          </div>
         </div>
-
-        <div class="hero-actions">
-          <a href="#projects" class="cta-btn">
-            <ion-icon name="game-controller-outline"></ion-icon>
-            <span>Explore Games &amp; Projects</span>
-          </a>
-          <a href="https://drive.google.com/file/d/17HbJgZmQVOMH9lFsLAprEFYtj2eVtxd6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-outline">
-            <ion-icon name="document-text-outline"></ion-icon>
-            <span>Download Resume</span>
-          </a>
-          <a href="#contact" class="cta-btn cta-btn-outline">
-            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-            <span>Let's Talk</span>
-          </a>
-        </div>
-
-        <!-- Stat Matrix HUD Cards -->
-        <div class="hud-grid">
-
-          <div class="hud-card">
-            <div class="hud-value" data-count="3" data-suffix="x" data-float="false">3<span class="accent">x</span></div>
-            <div class="hud-label">Runtime Speedup</div>
-            <div class="hud-desc">Deep profiling, draw call reduction & batching</div>
-          </div>
-
-          <div class="hud-card">
-            <div class="hud-value" data-count="56" data-prefix="-" data-suffix="%" data-float="false">-56<span class="accent">%</span></div>
-            <div class="hud-label">Build Size Cut</div>
-            <div class="hud-desc">Optimized footprint from 460MB down to 200MB</div>
-          </div>
-
-          <div class="hud-card">
-            <div class="hud-value" data-count="31" data-suffix="k+" data-float="false">31<span class="accent">k+</span></div>
-            <div class="hud-label">LOC Refactored</div>
-            <div class="hud-desc">Monolithic spaghetti decomposed to SOLID services</div>
-          </div>
-
-          <div class="hud-card">
-            <div class="hud-value" data-count="150" data-prefix="$" data-suffix="/mo" data-float="false">$150<span class="accent">/mo</span></div>
-            <div class="hud-label">10k DAU Hybrid Cloud</div>
-            <div class="hud-desc">Firebase + PlayFab combined low-cost architecture</div>
-          </div>
-
-          <div class="hud-card">
-            <div class="hud-value" data-count="100" data-suffix="k+" data-float="false">100<span class="accent">k+</span></div>
-            <div class="hud-label">Commercial Downloads</div>
-            <div class="hud-desc">Verified scale on Google Play Store titles</div>
-          </div>
-
-          <div class="hud-card">
-            <div class="hud-value" data-count="10" data-suffix="x" data-float="false">10<span class="accent">x</span></div>
-            <div class="hud-label">Dev Velocity</div>
-            <div class="hud-desc">Antigravity & Claude MCP in-engine toolchain</div>
-          </div>
-
-        </div>
-
       </div>
     </section>
 
-    <!-- Vector Wave Divider: Hero -> AI Stack -->
-    <div class="vector-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0 C150,90 350,-40 500,50 C650,140 900,10 1200,65 L1200,120 L0,120 Z" fill="#1d1637"></path>
-      </svg>
-    </div>
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+      <div class="blob" style="bottom: 0; left: 10%;"></div>
+      <div class="about__container container grid">
+        <div class="about__image">
+          <div class="blob-animate"></div>
+          <div class="blob-animate"></div>
+          <div class="about__profile-card">
+            <img src="./assets/images/Profile 2.jpg" alt="Ahmad Bilal Developer Profile" class="about__profile" loading="lazy" />
+          </div>
+        </div>
 
-    <!-- ==================== AI & ENGINEERING STACK ==================== -->
-    <section class="section" id="ai-stack" style="background: #1d1637;">
-      <div class="container">
-
-        <div class="section-header">
-          <div class="section-tag"><span class="vector-star-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span> Engineering Superpower</div>
-          <h2 class="section-title">AI as a Force Multiplier // Grounded in Engine Craftsmanship</h2>
-          <p class="section-desc">
-            To an experienced game developer, AI is neither a crutch nor a code copy-paster—it is an advanced engineering compiler. By connecting custom LLMs directly into the Unity editor via Model Context Protocol (MCP) and Antigravity, I automate deterministic AST code audits, track memory regressions in real time, and eliminate repetitive boilerplate. This preserves 100% of my focus for what actually makes a great game: crisp game feel, tight collision physics, rock-solid architecture, and high-framerate performance.
+        <div class="about__data">
+          <h2 class="section__title" style="text-align: initial; margin-bottom: 1.5rem;">
+            Engineering Precision <br />
+            <span>Meets Game Creativity</span>
+          </h2>
+          <p class="about__description">
+            I am a specialized <b>Unity Game Developer & AI Systems Engineer</b> focused on building high-performance 2D/3D mobile titles, robust monetization pipelines, and scalable cloud backends.
+            <br /><br />
+            My core strength is bridging creative game mechanics with production-ready software engineering: from <b>Microsoft Azure PlayFab</b> silent authentication architectures to multi-network <b>Ad Mediation (AppLovin MAX & Google AdMob remote switching)</b>, dynamic mesh physics, and autonomous NPC pathfinding.
           </p>
+
+          <div class="about__highlights">
+            <div class="about__highlight-box">
+              <h3 class="about__highlight-number">10+</h3>
+              <p class="about__highlight-title">Shipped Titles</p>
+            </div>
+            <div class="about__highlight-box">
+              <h3 class="about__highlight-number">9+</h3>
+              <p class="about__highlight-title">Ad Networks</p>
+            </div>
+            <div class="about__highlight-box">
+              <h3 class="about__highlight-number">100K+</h3>
+              <p class="about__highlight-title">Downloads</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="button">
+            Let's Collaborate <i class="ri-mail-send-line"></i>
+          </a>
         </div>
-
-        <div class="ai-grid">
-
-          <div class="ai-card">
-            <div class="ai-card-icon">
-              <ion-icon name="hardware-chip-outline"></ion-icon>
-            </div>
-            <h3 class="ai-card-title">In-Engine MCP Architecture &amp; Real-Time Auditing</h3>
-            <p class="ai-card-text">
-              Connected Claude and Gemini directly into Unity via <b>Model Context Protocol (MCP)</b>. Enables live Abstract Syntax Tree (AST) code auditing, automated memory profiling, instant regression tracking, and 10x faster complex game system authoring without compromising architecture.
-            </p>
-            <div class="ai-pills">
-              <span class="ai-pill">MCP Protocol</span>
-              <span class="ai-pill">In-Engine Audits</span>
-              <span class="ai-pill">AST Analysis</span>
-              <span class="ai-pill">Zero Boilerplate</span>
-            </div>
-          </div>
-
-          <div class="ai-card purple">
-            <div class="ai-card-icon">
-              <ion-icon name="cloudy-outline"></ion-icon>
-            </div>
-            <h3 class="ai-card-title">Dual Cloud Synergy: Azure PlayFab + Firebase</h3>
-            <p class="ai-card-text">
-              Engineered a unified multi-platform backend harmonizing <b>Microsoft Azure PlayFab</b> with <b>Firebase Firestore</b>. Designed delta state synchronization and intelligent client caching to sustain <b>10,000 Daily Active Users (DAU)</b> at only <b>$100 – $200 / month</b>.
-            </p>
-            <div class="ai-pills">
-              <span class="ai-pill">Azure PlayFab</span>
-              <span class="ai-pill">Firebase Realtime</span>
-              <span class="ai-pill">Delta Caching</span>
-              <span class="ai-pill">90% Cost Cut</span>
-            </div>
-          </div>
-
-          <div class="ai-card emerald">
-            <div class="ai-card-icon">
-              <ion-icon name="git-merge-outline"></ion-icon>
-            </div>
-            <h3 class="ai-card-title">31k LOC Monolithic Refactoring &amp; Decoupling</h3>
-            <p class="ai-card-text">
-              Dissected a 31,000-line legacy monolithic game into modular, SOLID-compliant C# micro-services. Cut a 4,000-line database manager down to 2,000 lines of decoupled mini-services, and halved a 3,000-line gameplay manager—boosting maintainability score from <b>50 to 80+</b>.
-            </p>
-            <div class="ai-pills">
-              <span class="ai-pill">SOLID Principles</span>
-              <span class="ai-pill">Decoupled Services</span>
-              <span class="ai-pill">ScriptableObjects</span>
-              <span class="ai-pill">Maintainability: 80+</span>
-            </div>
-          </div>
-
-          <div class="ai-card">
-            <div class="ai-card-icon">
-              <ion-icon name="speedometer-outline"></ion-icon>
-            </div>
-            <h3 class="ai-card-title">Hardware Profiling &amp; Extreme Mobile Optimization</h3>
-            <p class="ai-card-text">
-              Deep profiling across low-end Android &amp; iOS devices using Unity Profiler and RenderDoc. Reduced runtime garbage collection spikes, eliminated draw call bottlenecks through dynamic batching, and shrunk APK/AAB build footprints by <b>56% (460 MB down to 200 MB)</b> while locking stable 60 FPS.
-            </p>
-            <div class="ai-pills">
-              <span class="ai-pill">Locked 60 FPS</span>
-              <span class="ai-pill">Zero GC Spikes</span>
-              <span class="ai-pill">Draw Call Batching</span>
-              <span class="ai-pill">-56% Build Size</span>
-            </div>
-          </div>
-
-        </div>
-
       </div>
     </section>
 
-    <!-- Vector Wave Divider: AI Stack -> Services -->
-    <div class="vector-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,45 C200,110 400,-15 600,60 C800,135 1020,10 1200,50 L1200,120 L0,120 Z" fill="#150f28"></path>
-      </svg>
-    </div>
+    <!-- PROJECTS -->
+    <section class="projects section" id="projects">
+      <div class="blob" style="top: 20%; right: 10%;"></div>
+      <h2 class="section__title">
+        I make Incredible <br />
+        <span>Games & Systems</span>
+      </h2>
 
-    <!-- ==================== CORE CAPABILITIES & SERVICES ==================== -->
-    <section class="section" id="services">
-      <div class="container">
+      <!-- Swiper Featured Carousel -->
+      <div class="container" style="margin-bottom: 4rem;">
+        <div class="projects__swiper swiper">
+          <div class="swiper-wrapper">
 
-        <div class="section-header">
-          <div class="section-tag"><span class="vector-star-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span> Game Dev Disciplines</div>
-          <h2 class="section-title">Core Engine &amp; Systems Capabilities</h2>
-          <p class="section-desc">
-            Production-proven engineering across real-time 3D, gameplay physics, low-latency mobile architecture, and scalable live-ops cloud backends.
-          </p>
+            <!-- 1. Bulb Sort: Light Color Puzzle (SabaSoft) -->
+            <article class="projects__card swiper-slide">
+              <div class="blob"></div>
+              <div class="projects__top-row">
+                <div class="projects__number"><h1>01</h1></div>
+                <span class="projects__badge sabasoft">SabaSoft // Full Dev</span>
+              </div>
+              <div class="projects__data">
+                <h3 class="projects__title">Bulb Sort: Light Color Puzzle</h3>
+                <p class="projects__subtitle">Unity C# // Puzzle Logic</p>
+                <p class="projects__description">
+                  Fully developed from concept to store release at SabaSoft. Implemented multi-tube state validation, fluid color pouring, and optimal memory pooling.
+                </p>
+                <div class="projects__tags">
+                  <span class="projects__tag">Full A-to-Z</span>
+                  <span class="projects__tag">State Validation</span>
+                  <span class="projects__tag">Puzzle</span>
+                </div>
+              </div>
+              <div class="projects__image">
+                <img src="./assets/images/project-bulb-sort.jpg" alt="Bulb Sort: Light Color Puzzle" class="projects__img" loading="lazy" />
+                <div class="projects__links">
+                  <a href="https://play.google.com/store/apps/details?id=com.vectorlabzlimited.light.bulb.sort.color.puzzle.game" target="_blank" rel="noopener noreferrer" class="projects__action-btn" title="View on Play Store">
+                    <i class="ri-google-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Nut n Bolt Color Sorting Game (SabaSoft) -->
+            <article class="projects__card swiper-slide">
+              <div class="blob"></div>
+              <div class="projects__top-row">
+                <div class="projects__number"><h1>02</h1></div>
+                <span class="projects__badge sabasoft">SabaSoft // Full Dev</span>
+              </div>
+              <div class="projects__data">
+                <h3 class="projects__title">Nut n Bolt Color Sorting</h3>
+                <p class="projects__subtitle">Unity 3D // Mechanics</p>
+                <p class="projects__description">
+                  Developed entire gameplay loop end-to-end at SabaSoft. Engineered 3D thread rotation transforms, stack validation, and responsive mobile controls.
+                </p>
+                <div class="projects__tags">
+                  <span class="projects__tag">Full A-to-Z</span>
+                  <span class="projects__tag">3D Physics</span>
+                  <span class="projects__tag">Sorting Game</span>
+                </div>
+              </div>
+              <div class="projects__image">
+                <img src="./assets/images/project-6.jpg" alt="Nut n Bolt Color Sorting Game" class="projects__img" loading="lazy" />
+                <div class="projects__links">
+                  <a href="https://play.google.com/store/apps/details?id=com.vectorlabzlimited.screw.sort.color.puzzle.game" target="_blank" rel="noopener noreferrer" class="projects__action-btn" title="View on Play Store">
+                    <i class="ri-google-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Flip Diving Master: Flip Games (SabaSoft) -->
+            <article class="projects__card swiper-slide">
+              <div class="blob"></div>
+              <div class="projects__top-row">
+                <div class="projects__number"><h1>03</h1></div>
+                <span class="projects__badge sabasoft">SabaSoft // Ad Mediation</span>
+              </div>
+              <div class="projects__data">
+                <h3 class="projects__title">Flip Diving Master: Flip Games</h3>
+                <p class="projects__subtitle">Monetization Architecture</p>
+                <p class="projects__description">
+                  Engineered comprehensive multi-network ad mediation system at SabaSoft. Built reliable rewarded video callbacks and waterfall optimization.
+                </p>
+                <div class="projects__tags">
+                  <span class="projects__tag">Ad Mediation</span>
+                  <span class="projects__tag">Monetization</span>
+                  <span class="projects__tag">Sports Simulation</span>
+                </div>
+              </div>
+              <div class="projects__image">
+                <img src="./assets/images/project-flip-diving.jpg" alt="Flip Diving Master" class="projects__img" loading="lazy" />
+                <div class="projects__links">
+                  <a href="https://play.google.com/store/apps/details?id=com.vectorlabslimited.cliff.diving.puzzle.game&pli=1" target="_blank" rel="noopener noreferrer" class="projects__action-btn" title="View on Play Store">
+                    <i class="ri-google-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. Park Your Cruiser 3D (Numzz Tech) -->
+            <article class="projects__card swiper-slide">
+              <div class="blob"></div>
+              <div class="projects__top-row">
+                <div class="projects__number"><h1>04</h1></div>
+                <span class="projects__badge numzz">Numzz Tech // 3D City & 75 Levels</span>
+              </div>
+              <div class="projects__data">
+                <h3 class="projects__title">Park Your Cruiser 3D</h3>
+                <p class="projects__subtitle">Vehicle Simulation</p>
+                <p class="projects__description">
+                  Developed 1-to-1 simulation gameplay recreation at Numzz Tech. Replaced plain terrain with a vibrant 3D city scene and crafted 75 custom challenge levels.
+                </p>
+                <div class="projects__tags">
+                  <span class="projects__tag">75 Levels</span>
+                  <span class="projects__tag">City Scene</span>
+                  <span class="projects__tag">Wheel Colliders</span>
+                </div>
+              </div>
+              <div class="projects__image">
+                <img src="./assets/images/project-park-your-cruiser.jpg" alt="Park Your Cruiser 3D" class="projects__img" loading="lazy" />
+                <div class="projects__links">
+                  <a href="https://play.google.com/store/apps/details?id=com.steelcloudstudio.luxury.prado.car.parking.challenge&hl=en" target="_blank" rel="noopener noreferrer" class="projects__action-btn" title="View Reference Play Store">
+                    <i class="ri-google-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5. Stack Runner: Office Delivery (Numzz Tech) -->
+            <article class="projects__card swiper-slide">
+              <div class="blob"></div>
+              <div class="projects__top-row">
+                <div class="projects__number"><h1>05</h1></div>
+                <span class="projects__badge numzz">Numzz Tech // Custom Mechanics</span>
+              </div>
+              <div class="projects__data">
+                <h3 class="projects__title">Stack Runner: Office Delivery</h3>
+                <p class="projects__subtitle">Hyper-Casual Runner</p>
+                <p class="projects__description">
+                  Re-engineered starter kit into an office environment runner at Numzz Tech. Created file collecting stacks and CEO office submission sequence.
+                </p>
+                <div class="projects__tags">
+                  <span class="projects__tag">Office Runner</span>
+                  <span class="projects__tag">Stack Mechanics</span>
+                  <span class="projects__tag">Hyper Casual</span>
+                </div>
+              </div>
+              <div class="projects__image">
+                <img src="./assets/images/project-stack-balancer.jpg" alt="Stack Runner Office Delivery" class="projects__img" loading="lazy" />
+                <div class="projects__links">
+                  <a href="https://play.google.com/store/apps/details?id=com.stack.balance.sdt" target="_blank" rel="noopener noreferrer" class="projects__action-btn" title="View Reference Play Store">
+                    <i class="ri-google-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6. Unity Dynamic Ads Remote Config Package -->
+            <article class="projects__card swiper-slide">
+              <div class="blob"></div>
+              <div class="projects__top-row">
+                <div class="projects__number"><h1>06</h1></div>
+                <span class="projects__badge codekrux">Production Tool // Remote Config</span>
+              </div>
+              <div class="projects__data">
+                <h3 class="projects__title">Dynamic Ads Remote Config</h3>
+                <p class="projects__subtitle">Unity Package // MAX & AdMob</p>
+                <p class="projects__description">
+                  Modular Unity package enabling real-time runtime provider switching between AppLovin MAX and Google AdMob via Firebase Remote Config without rebuilding.
+                </p>
+                <div class="projects__tags">
+                  <span class="projects__tag">AppLovin MAX</span>
+                  <span class="projects__tag">Google AdMob</span>
+                  <span class="projects__tag">Remote Config</span>
+                </div>
+              </div>
+              <div class="projects__image">
+                <img src="./assets/images/project-ads-package.jpg" alt="Unity Dynamic Ads Package" class="projects__img" loading="lazy" />
+                <div class="projects__links">
+                  <a href="https://github.com/Ahmad8i1a1/Ads_Custom_Package" target="_blank" rel="noopener noreferrer" class="projects__action-btn" title="View GitHub Repo">
+                    <i class="ri-github-line"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 7. Fish Eat Fish And Grow (SabaSoft) -->
+            <article class="projects__card swiper-slide">
+              <div class="blob"></div>
+              <div class="projects__top-row">
+                <div class="projects__number"><h1>07</h1></div>
+                <span class="projects__badge sabasoft">SabaSoft // 2D Skeletal Animation</span>
+              </div>
+              <div class="projects__data">
+                <h3 class="projects__title">Fish Eat Fish And Grow</h3>
+                <p class="projects__subtitle">2D Rigging // Sea Grass Animation</p>
+                <p class="projects__description">
+                  Designed environmental animations at SabaSoft. Inserted 2D skeletal bones into underwater sprites and crafted procedural undulating sea grass motions.
+                </p>
+                <div class="projects__tags">
+                  <span class="projects__tag">2D Bone Rigging</span>
+                  <span class="projects__tag">Sea Grass</span>
+                  <span class="projects__tag">IO Simulation</span>
+                </div>
+              </div>
+              <div class="projects__image">
+                <img src="./assets/images/project-fish-eat-fish.jpg" alt="Fish Eat Fish And Grow" class="projects__img" loading="lazy" />
+                <div class="projects__links">
+                  <a href="https://play.google.com/store/apps/details?id=com.vectorlabslimited.fish.eater.io.game" target="_blank" rel="noopener noreferrer" class="projects__action-btn" title="View on Play Store">
+                    <i class="ri-google-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 8. Jam Parking: Car Parking Games -->
+            <article class="projects__card swiper-slide">
+              <div class="blob"></div>
+              <div class="projects__top-row">
+                <div class="projects__number"><h1>08</h1></div>
+                <span class="projects__badge">Level Design & Grid Mechanics</span>
+              </div>
+              <div class="projects__data">
+                <h3 class="projects__title">Jam Parking: Car Parking</h3>
+                <p class="projects__subtitle">Google Play Store Puzzle</p>
+                <p class="projects__description">
+                  Authored puzzle level designs with progressive difficulty curves. Resolved collision grid indexing edge cases and polished vehicle exit animations.
+                </p>
+                <div class="projects__tags">
+                  <span class="projects__tag">Level Design</span>
+                  <span class="projects__tag">Grid Mechanics</span>
+                  <span class="projects__tag">Car Parking</span>
+                </div>
+              </div>
+              <div class="projects__image">
+                <img src="./assets/images/project-jam-parking.jpg" alt="Jam Parking Car Parking Games" class="projects__img" loading="lazy" />
+                <div class="projects__links">
+                  <a href="https://play.google.com/store/apps/details?id=com.ng.carparking.drivinggames" target="_blank" rel="noopener noreferrer" class="projects__action-btn" title="View on Play Store">
+                    <i class="ri-google-play-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-
-        <div class="services-grid">
-
-          <div class="service-box">
-            <div class="service-top">
-              <div class="service-icon"><ion-icon name="cube-outline"></ion-icon></div>
-              <h3 class="service-name">Unity C# &amp; Modular Frameworks</h3>
-            </div>
-            <p class="service-desc">
-              Designing decoupled, event-driven frameworks using ScriptableObject architectures, finite state machines, and clean interfaces that eradicate monolithic god-classes.
-            </p>
-          </div>
-
-          <div class="service-box">
-            <div class="service-top">
-              <div class="service-icon"><ion-icon name="pulse-outline"></ion-icon></div>
-              <h3 class="service-name">Hardware Profiling &amp; 60 FPS Pacing</h3>
-            </div>
-            <p class="service-desc">
-              Deep profiling via Unity Profiler, Memory Profiler, and RenderDoc. Eliminating GC allocation spikes, optimizing draw call batching, and locking 60 FPS on low-end mobile.
-            </p>
-          </div>
-
-          <div class="service-box">
-            <div class="service-top">
-              <div class="service-icon"><ion-icon name="car-sport-outline"></ion-icon></div>
-              <h3 class="service-name">Physics Simulation &amp; Game Feel</h3>
-            </div>
-            <p class="service-desc">
-              Sub-millisecond vehicle dynamics, wheel colliders, suspension damping, dynamic 3D mesh slicing, collision matrix layering, and tactile juice (camera shake, haptics).
-            </p>
-          </div>
-
-          <div class="service-box">
-            <div class="service-top">
-              <div class="service-icon"><ion-icon name="cloudy-outline"></ion-icon></div>
-              <h3 class="service-name">Live-Ops &amp; Cloud (PlayFab + Firebase)</h3>
-            </div>
-            <p class="service-desc">
-              Multiplayer backends, silent authentication pipelines, dynamic global V2 leaderboards, delta state caching, and secure HTTP client-server communications via Unity Web Requests.
-            </p>
-          </div>
-
-          <div class="service-box">
-            <div class="service-top">
-              <div class="service-icon"><ion-icon name="cash-outline"></ion-icon></div>
-              <h3 class="service-name">Production Ad Mediation &amp; SDKs</h3>
-            </div>
-            <p class="service-desc">
-              Production mediation pipelines across AppLovin, AdMob, Meta, Unity Ads, ironSource, Mintegral, and Liftoff with rewarded video callbacks, pacing, and safe-area adaptors.
-            </p>
-          </div>
-
-          <div class="service-box">
-            <div class="service-top">
-              <div class="service-icon"><ion-icon name="construct-outline"></ion-icon></div>
-              <h3 class="service-name">Custom Editor Tools &amp; Automation</h3>
-            </div>
-            <p class="service-desc">
-              Authoring custom Unity editor inspectors, automated level progression validators, asset bundle preprocessors, and in-engine MCP pipelines for rapid bug auditing.
-            </p>
-          </div>
-
-        </div>
-
       </div>
-    </section>
 
-    <!-- Vector Wave Divider: Services -> Projects -->
-    <div class="vector-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0 C160,85 360,-35 520,45 C680,125 920,20 1200,70 L1200,120 L0,120 Z" fill="#1d1637"></path>
-      </svg>
-    </div>
-
-    <!-- ==================== FEATURED GAMES & PROJECTS ==================== -->
-    <section class="section" id="projects" style="background: #1d1637;">
+      <!-- Category Filter Chips for Full Catalog -->
       <div class="container">
-
-        <div class="section-header">
-          <div class="section-tag"><span class="vector-star-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span> Shipped &amp; Prototypes</div>
-          <h2 class="section-title">Featured Games, Systems &amp; Technical Showcases</h2>
-          <p class="section-desc">
-            A curated archive of commercial mobile releases with 100k+ downloads, procedural physics prototypes, custom engine tooling, and open-source packages.
-          </p>
+        <h3 style="text-align: center; margin-bottom: 1.5rem; font-size: var(--h2-font-size);">Explore Full Verified Catalog</h3>
+        <div class="projects__filters">
+          <button class="projects__filter-btn active" data-category="all">All (22)</button>
+          <button class="projects__filter-btn" data-category="games">Games (17)</button>
+          <button class="projects__filter-btn" data-category="ai">AI Systems (3)</button>
+          <button class="projects__filter-btn" data-category="tools">Tools & Packages (4)</button>
         </div>
 
-        <!-- Futuristic Filter Chips Bar -->
-        <div class="filter-bar">
-          <button class="filter-chip active" data-filter-category="all">
-            <ion-icon name="grid-outline"></ion-icon>
-            <span>All Projects</span>
-          </button>
-          <button class="filter-chip" data-filter-category="games">
-            <ion-icon name="game-controller-outline"></ion-icon>
-            <span>Games</span>
-          </button>
-          <button class="filter-chip" data-filter-category="ai">
-            <ion-icon name="sparkles-outline"></ion-icon>
-            <span>AI & Machine Learning</span>
-          </button>
-          <button class="filter-chip" data-filter-category="hyper-casual">
-            <ion-icon name="play-outline"></ion-icon>
-            <span>Hyper Casual</span>
-          </button>
-          <button class="filter-chip" data-filter-category="puzzle">
-            <ion-icon name="extension-puzzle-outline"></ion-icon>
-            <span>Puzzle</span>
-          </button>
-          <button class="filter-chip" data-filter-category="simulation">
-            <ion-icon name="car-sport-outline"></ion-icon>
-            <span>Simulation</span>
-          </button>
-          <button class="filter-chip" data-filter-category="ar">
-            <ion-icon name="scan-outline"></ion-icon>
-            <span>AR / Spatial</span>
-          </button>
-          <button class="filter-chip" data-filter-category="tools">
-            <ion-icon name="code-slash-outline"></ion-icon>
-            <span>Tools & SDKs</span>
-          </button>
-        </div>
+        <div class="projects__grid">
 
-        <!-- Projects Grid -->
-        <div class="projects-grid">
-
-          <!-- 1. Bulb Sort: Light Color Puzzle -->
-          <div class="project-card" data-category="games, puzzle">
-            <div class="project-thumb">
-              <span class="project-badge">SabaSoft // A-Z Developed</span>
-              <img src="./assets/images/project-bulb-sort.jpg" alt="Bulb Sort Light Color Puzzle" loading="lazy">
+          <!-- 1. Bulb Sort -->
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>01</h1></div>
+              <span class="projects__badge sabasoft">SabaSoft // Full Dev</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Bulb Sort: Light Color Puzzle</h3>
-              <ul class="project-bullets">
-                <li>Commercial lightbulb color sorting puzzle title published by VectorLabz Limited, engineered fully A-to-Z from the ground up at SabaSoft.</li>
-                <li>Designed responsive sorting state machine with recursive win condition verification, undo move stacks, and tube capacities.</li>
-                <li>Built vibrant glowing light emission shaders, bloom visual feedback, and tactile audio juice for satisfying completion bursts.</li>
-                <li>Complete monetization pipeline: banner, interstitial, and rewarded hints with automated level difficulty progression.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">SabaSoft</span>
-                  <span class="project-tag">A-Z Developed</span>
-                  <span class="project-tag">Color Sorting</span>
-                  <span class="project-tag">Shaders</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://play.google.com/store/apps/details?id=com.vectorlabzlimited.light.bulb.sort.color.puzzle.game" target="_blank" rel="noopener noreferrer" class="project-btn playstore">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    <span>PlayStore</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Bulb Sort: Light Color Puzzle</h3>
+              <p class="projects__subtitle">Unity C# // Puzzle Logic</p>
+              <p class="projects__description">Full A-to-Z development at SabaSoft. Multi-tube color transfer mechanics and particle effects.</p>
+              <div class="projects__tags"><span class="projects__tag">SabaSoft</span><span class="projects__tag">Puzzle</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-bulb-sort.jpg" alt="Bulb Sort" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://play.google.com/store/apps/details?id=com.vectorlabzlimited.light.bulb.sort.color.puzzle.game" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-google-play-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- 2. Nut n Bolt Color Sorting Game -->
-          <div class="project-card" data-category="games, puzzle">
-            <div class="project-thumb">
-              <span class="project-badge">SabaSoft // A-Z Developed</span>
-              <img src="./assets/images/project-6.jpg" alt="Nut n Bolt Color Sorting Game" loading="lazy">
+          <!-- 2. Nut n Bolt -->
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>02</h1></div>
+              <span class="projects__badge sabasoft">SabaSoft // Full Dev</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Nut n Bolt Color Sorting Game</h3>
-              <ul class="project-bullets">
-                <li>Commercial 3D screw and bolt color sorting puzzle game, engineered 100% from scratch A-to-Z at SabaSoft for VectorLabz Limited.</li>
-                <li>Programmed 3D rotation, thread unscrewing math, physics-based transfer animations, and empty screw slot allocation logic.</li>
-                <li>Crafted 50+ procedural and hand-authored puzzle configurations with progressive difficulty scaling.</li>
-                <li>Production monetization with AdMob mediation, rewarded undo/extra bolt hints, and optimized 60 FPS mobile rendering.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">SabaSoft</span>
-                  <span class="project-tag">A-Z Developed</span>
-                  <span class="project-tag">3D Physics</span>
-                  <span class="project-tag">Screw Sort</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://play.google.com/store/apps/details?id=com.vectorlabzlimited.screw.sort.color.puzzle.game" target="_blank" rel="noopener noreferrer" class="project-btn playstore">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    <span>PlayStore</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Nut n Bolt Color Sorting</h3>
+              <p class="projects__subtitle">Unity 3D // Mechanics</p>
+              <p class="projects__description">Full A-to-Z development at SabaSoft. 3D thread mechanics, stack validation, and responsive controls.</p>
+              <div class="projects__tags"><span class="projects__tag">SabaSoft</span><span class="projects__tag">3D Physics</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-6.jpg" alt="Nut n Bolt" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://play.google.com/store/apps/details?id=com.vectorlabzlimited.screw.sort.color.puzzle.game" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-google-play-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- 3. Flip Diving Master: Flip Games -->
-          <div class="project-card" data-category="games, tools">
-            <div class="project-thumb">
-              <span class="project-badge">SabaSoft // Ad Mediation</span>
-              <img src="./assets/images/project-flip-diving.jpg" alt="Flip Diving Master Flip Games" loading="lazy">
+          <!-- 3. Flip Diving Master -->
+          <article class="projects__grid-card" data-category="games, tools">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>03</h1></div>
+              <span class="projects__badge sabasoft">SabaSoft // Ad Mediation</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Flip Diving Master: Flip Games</h3>
-              <ul class="project-bullets">
-                <li>Commercial ragdoll cliff diving physics title published by VectorLabz Limited.</li>
-                <li>Architected and integrated the production-grade multi-network Ad Mediation system at SabaSoft.</li>
-                <li>Engineered smart interstitial pacing, rewarded video retry callbacks, banner safe-area anchors, and crash-resilient SDK initialization.</li>
-                <li>Monitored live telemetry to optimize fill rates, maximize eCPM revenue, and eliminate UI thread frame drops during ad caching.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">SabaSoft</span>
-                  <span class="project-tag">Ad Mediation</span>
-                  <span class="project-tag">VectorLabz</span>
-                  <span class="project-tag">Physics</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://play.google.com/store/apps/details?id=com.vectorlabslimited.cliff.diving.puzzle.game&pli=1" target="_blank" rel="noopener noreferrer" class="project-btn playstore">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    <span>PlayStore</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Flip Diving Master</h3>
+              <p class="projects__subtitle">Ad Mediation System</p>
+              <p class="projects__description">Built multi-network ad mediation pipeline and rewarded video waterfall system at SabaSoft.</p>
+              <div class="projects__tags"><span class="projects__tag">Ad Mediation</span><span class="projects__tag">Sports</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-flip-diving.jpg" alt="Flip Diving Master" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://play.google.com/store/apps/details?id=com.vectorlabslimited.cliff.diving.puzzle.game&pli=1" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-google-play-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 4. Fish Eat Fish And Grow -->
-          <div class="project-card" data-category="games, simulation">
-            <div class="project-thumb">
-              <span class="project-badge">SabaSoft // 2D Bone Rigging</span>
-              <img src="./assets/images/project-fish-eat-fish.jpg" alt="Fish Eat Fish And Grow" loading="lazy">
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>04</h1></div>
+              <span class="projects__badge sabasoft">SabaSoft // 2D Rigging</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Fish Eat Fish And Grow</h3>
-              <ul class="project-bullets">
-                <li>Real-time aquatic survival &amp; growth simulator published by VectorLabz Limited.</li>
-                <li>Designed underwater environment animation at SabaSoft using 2D skeletal bone rigging (Sprite Skinning &amp; 2D Animation) in sea grass.</li>
-                <li>Created organic, flowing ocean sway effects with bone weighting and procedural sine wave oscillations without costly sprite sheet memory.</li>
-                <li>Optimized multi-entity 2D sprite draw calls, dynamic predator-prey scaling, and fluid mobile underwater physics.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">SabaSoft</span>
-                  <span class="project-tag">2D Bone Rigging</span>
-                  <span class="project-tag">VectorLabz</span>
-                  <span class="project-tag">Environment Art</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://play.google.com/store/apps/details?id=com.vectorlabslimited.fish.eater.io.game" target="_blank" rel="noopener noreferrer" class="project-btn playstore">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    <span>PlayStore</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Fish Eat Fish And Grow</h3>
+              <p class="projects__subtitle">2D Skeletal Animation</p>
+              <p class="projects__description">Engineered 2D skeletal bone rigging in sea grass and natural marine swimming animations at SabaSoft.</p>
+              <div class="projects__tags"><span class="projects__tag">2D Bone Rigging</span><span class="projects__tag">Simulation</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-fish-eat-fish.jpg" alt="Fish Eat Fish" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://play.google.com/store/apps/details?id=com.vectorlabslimited.fish.eater.io.game" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-google-play-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- 5. Arrow Cube 3D: Escape Puzzle -->
-          <div class="project-card" data-category="games, puzzle">
-            <div class="project-thumb">
-              <span class="project-badge">SabaSoft // UI Overhaul</span>
-              <img src="./assets/images/project-arrow-cube.jpg" alt="Arrow Cube 3D Escape Puzzle" loading="lazy">
+          <!-- 5. Arrow Cube 3D -->
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>05</h1></div>
+              <span class="projects__badge sabasoft">SabaSoft // UI Remapping</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Arrow Cube 3D: Escape Puzzle</h3>
-              <ul class="project-bullets">
-                <li>3D spatial escape puzzle game published by VectorLabz.</li>
-                <li>Executed complete UI remapping and responsive canvas architecture overhaul at SabaSoft across mobile aspect ratios (16:9 to 21:9).</li>
-                <li>Eradicated canvas draw call spikes by restructuring dynamic HUD layouts, batching static UI elements, and setting up clean anchor pivots.</li>
-                <li>Enhanced player touch target usability, orientation adaptors, and high-DPI font sharpness.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">SabaSoft</span>
-                  <span class="project-tag">UI Remapping</span>
-                  <span class="project-tag">VectorLabz</span>
-                  <span class="project-tag">Mobile UX</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://play.google.com/store/apps/details?id=com.vectorlabz.arrowcube" target="_blank" rel="noopener noreferrer" class="project-btn playstore">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    <span>PlayStore</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Arrow Cube 3D: Escape Puzzle</h3>
+              <p class="projects__subtitle">UI & Canvas Refactor</p>
+              <p class="projects__description">Complete UI remapping and responsive canvas scaling across tall aspect-ratio mobile displays at SabaSoft.</p>
+              <div class="projects__tags"><span class="projects__tag">UI Remapping</span><span class="projects__tag">Escape Puzzle</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-arrow-cube.jpg" alt="Arrow Cube 3D" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://play.google.com/store/apps/details?id=com.vectorlabz.arrowcube" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-google-play-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 6. Digit Shooter World -->
-          <div class="project-card" data-category="games, hyper-casual, puzzle">
-            <div class="project-thumb">
-              <span class="project-badge">SabaSoft // Prototype</span>
-              <img src="./assets/images/project-digit-shooter.jpg" alt="Digit Shooter World" loading="lazy">
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>06</h1></div>
+              <span class="projects__badge sabasoft">SabaSoft // Prototype</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Digit Shooter World</h3>
-              <ul class="project-bullets">
-                <li>Hyper-casual math shooter and runner title published by Kunhar Games Studios.</li>
-                <li>Engineered the core initial gameplay prototype at SabaSoft: rapid-fire projectile mechanics, multiplier gates, and digit counter calculations.</li>
-                <li>Implemented dynamic fire-rate upgrades, barrel scaling animations, and obstacle destruction particle feedback.</li>
-                <li>Delivered a polished, playable prototype build that validated mechanics and paved the way for commercial launch.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">SabaSoft</span>
-                  <span class="project-tag">Prototype</span>
-                  <span class="project-tag">Kunhar Games</span>
-                  <span class="project-tag">Runner Shooter</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://play.google.com/store/apps/details?id=com.kunhargamesstudios.digit.shooter.game" target="_blank" rel="noopener noreferrer" class="project-btn playstore">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    <span>PlayStore</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Digit Shooter World</h3>
+              <p class="projects__subtitle">Kunhar Games // Mechanics</p>
+              <p class="projects__description">Architected initial core gameplay prototype, gate multipliers, and progressive weapon firing rates.</p>
+              <div class="projects__tags"><span class="projects__tag">Prototype</span><span class="projects__tag">Hyper Casual</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-digit-shooter.jpg" alt="Digit Shooter World" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://play.google.com/store/apps/details?id=com.kunhargamesstudios.digit.shooter.game" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-google-play-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 7. Church Life Simulator Game -->
-          <div class="project-card" data-category="games, simulation">
-            <div class="project-thumb">
-              <span class="project-badge">SabaSoft // Bug Fixing</span>
-              <img src="./assets/images/project-church-life.jpg" alt="Church Life Simulator Game" loading="lazy">
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>07</h1></div>
+              <span class="projects__badge sabasoft">SabaSoft // Bug Fixing</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Church Life Simulator Game</h3>
-              <ul class="project-bullets">
-                <li>Narrative roleplaying simulation game published by Kunhar Games Studios.</li>
-                <li>Conducted systematic gameplay code audit at SabaSoft, resolving critical state-machine deadlocks and NPC interaction trigger bugs.</li>
-                <li>Fixed choice-tree progression inconsistencies and dialogue sequence timing across character decision moments.</li>
-                <li>Stabilized save/load data serialization and smoothed animation transition blend trees.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">SabaSoft</span>
-                  <span class="project-tag">Bug Fixing</span>
-                  <span class="project-tag">Kunhar Games</span>
-                  <span class="project-tag">Simulation</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://play.google.com/store/apps/details?id=com.kunhargamesstudios.church.life.simulator.game" target="_blank" rel="noopener noreferrer" class="project-btn playstore">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    <span>PlayStore</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Church Life Simulator Game</h3>
+              <p class="projects__subtitle">Kunhar Games // Audit</p>
+              <p class="projects__description">Conducted gameplay audit, resolved state-machine deadlocks, NPC triggers, and choice-tree timing.</p>
+              <div class="projects__tags"><span class="projects__tag">State Machines</span><span class="projects__tag">Simulation</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-church-life.jpg" alt="Church Life Simulator" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://play.google.com/store/apps/details?id=com.kunhargamesstudios.church.life.simulator.game" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-google-play-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 8. Bear Simulator: Wild Animal -->
-          <div class="project-card" data-category="games, simulation">
-            <div class="project-thumb">
-              <span class="project-badge">SabaSoft // iOS Graphics</span>
-              <img src="./assets/images/project-bear-simulation.jpg" alt="Bear Simulator Wild Animal" loading="lazy">
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>08</h1></div>
+              <span class="projects__badge sabasoft">SabaSoft // iOS VFX</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Bear Simulator: Wild Animal</h3>
-              <ul class="project-bullets">
-                <li>3D wildlife survival simulation game published on the Apple iOS App Store.</li>
-                <li>Authored custom visual particle effects at SabaSoft: terrain dust kicks, water splash collisions, attack impact bursts, and weather atmosphere.</li>
-                <li>Improved gameplay feel with tightened creature locomotion, camera follow damping, and tactile attack hitboxes.</li>
-                <li>Optimized shader passes and particle emitter memory allocations for smooth 60 FPS performance on Apple devices.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">SabaSoft</span>
-                  <span class="project-tag">Apple App Store</span>
-                  <span class="project-tag">Particle Effects</span>
-                  <span class="project-tag">Wildlife Sim</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://apps.apple.com/gb/app/bear-simulator-wild-animal/id1586336869" target="_blank" rel="noopener noreferrer" class="project-btn appstore">
-                    <ion-icon name="logo-apple"></ion-icon>
-                    <span>App Store</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Bear Simulator: Wild Animal</h3>
+              <p class="projects__subtitle">Apple App Store // Polish</p>
+              <p class="projects__description">Implemented particle systems, impact visual effects, smooth camera transitions, and iOS performance polish.</p>
+              <div class="projects__tags"><span class="projects__tag">Apple AppStore</span><span class="projects__tag">VFX</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-bear-simulation.jpg" alt="Bear Simulator" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://apps.apple.com/gb/app/bear-simulator-wild-animal/id1586336869" target="_blank" rel="noopener noreferrer" class="projects__action-btn" title="View on Apple App Store"><i class="ri-apple-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 9. Park Your Cruiser 3D -->
-          <div class="project-card" data-category="games, simulation">
-            <div class="project-thumb">
-              <span class="project-badge">Numzz Tech // City Sim</span>
-              <img src="./assets/images/project-park-your-cruiser.jpg" alt="Park Your Cruiser 3D" loading="lazy">
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>09</h1></div>
+              <span class="projects__badge numzz">Numzz Tech // 75 Levels</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Park Your Cruiser 3D</h3>
-              <ul class="project-bullets">
-                <li>1-to-1 production vehicle parking simulation engineered at Numzz Tech based on client reference specifications.</li>
-                <li>Replaced the original plain environment with a vibrant, optimized 3D city scene featuring dynamic lighting and realistic props.</li>
-                <li>Hand-crafted 75+ progressive challenge levels with custom obstacle courses, tight turning corridors, and precision parking bays.</li>
-                <li>Fine-tuned vehicle suspension dynamics, wheel colliders, responsive steering physics, and collision response matrix.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">Numzz Tech</span>
-                  <span class="project-tag">Car Physics</span>
-                  <span class="project-tag">3D City</span>
-                  <span class="project-tag">75 Levels</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://drive.google.com/drive/folders/1SDkzLhD6NZy9mWlYQKNmbjzoudk67D6E?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-btn">
-                    <ion-icon name="folder-outline"></ion-icon>
-                    <span>Drive</span>
-                  </a>
-                  <a href="https://play.google.com/store/apps/details?id=com.steelcloudstudio.luxury.prado.car.parking.challenge&hl=en" target="_blank" rel="noopener noreferrer" class="project-btn playstore">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    <span>PlayStore</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Park Your Cruiser 3D</h3>
+              <p class="projects__subtitle">Vehicle Simulation</p>
+              <p class="projects__description">Built 1-to-1 simulation replication with vibrant 3D city scene and 75 progressive parking challenge levels.</p>
+              <div class="projects__tags"><span class="projects__tag">75 Levels</span><span class="projects__tag">City Scene</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-park-your-cruiser.jpg" alt="Park Your Cruiser 3D" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://play.google.com/store/apps/details?id=com.steelcloudstudio.luxury.prado.car.parking.challenge&hl=en" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-google-play-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- 10. Stack Runner - Office Delivery Edition -->
-          <div class="project-card" data-category="games, hyper-casual">
-            <div class="project-thumb">
-              <span class="project-badge">Numzz Tech // Office Reskin</span>
-              <img src="./assets/images/project-stack-balancer.jpg" alt="Stack Runner Office Delivery Edition" loading="lazy">
+          <!-- 10. Stack Runner: Office Delivery -->
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>10</h1></div>
+              <span class="projects__badge numzz">Numzz Tech // Custom</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Stack Runner: Office Delivery</h3>
-              <ul class="project-bullets">
-                <li>Hyper-casual runner engineered at Numzz Tech delivering a 1-to-1 mechanical replication with an innovative narrative reskin.</li>
-                <li>Reworked the entire game kit with an executive office environment: the character stacks corporate documents/files instead of boxes.</li>
-                <li>Engineered dynamic stack height elevation (<code>StackUnderChar.cs</code>), obstacle slicing, and dramatic end-of-track file submission in the CEO's office.</li>
-                <li>Custom-built 3D office environments, interactive UI menus, smooth swipe steering (<code>PlayerMovement.cs</code>), and satisfying feedback juice.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">Numzz Tech</span>
-                  <span class="project-tag">Office Runner</span>
-                  <span class="project-tag">Physics Stacking</span>
-                  <span class="project-tag">Unity C#</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/Ahmad8i1a1/Stack-Runnner" target="_blank" rel="noopener noreferrer" class="project-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://play.google.com/store/apps/details?id=com.stack.balance.sdt" target="_blank" rel="noopener noreferrer" class="project-btn playstore">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    <span>PlayStore</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Stack Runner: Office Delivery</h3>
+              <p class="projects__subtitle">Hyper Casual</p>
+              <p class="projects__description">Created custom office environment runner, file collecting stack mechanics, and CEO delivery sequence.</p>
+              <div class="projects__tags"><span class="projects__tag">Office Runner</span><span class="projects__tag">Hyper Casual</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-stack-balancer.jpg" alt="Stack Runner" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://play.google.com/store/apps/details?id=com.stack.balance.sdt" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-google-play-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 11. Fruit Cutter - 3D Mesh Slicing -->
-          <div class="project-card" data-category="games, hyper-casual, simulation">
-            <div class="project-thumb">
-              <span class="project-badge">Unity C# // 3D Physics</span>
-              <img src="./assets/images/project-fruit-cutter.jpg" alt="Fruit Cutter 3D Mesh Slicing" loading="lazy">
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>11</h1></div>
+              <span class="projects__badge">GitHub // Code Audited</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Fruit Cutter - 3D Mesh Slicing</h3>
-              <ul class="project-bullets">
-                <li>Real-time dynamic 3D mesh slicing built on custom character &amp; mesh slicer pipeline (<code>BzSliceSkinnedMeshAdapter</code>, <code>BzSliceableCharacterBase</code>).</li>
-                <li>Dynamic plane intersection math, vertex re-triangulation, and automated UV coordinate remapping for newly generated slice surfaces.</li>
-                <li>Automatic Rigidbody center-of-mass recalculation (<code>CenterOfMassColliderBasedHelper</code>) and real-time convex hull mesh collider instantiation.</li>
-                <li>Native Android frame pacing (<code>swappywrapper</code>, <code>armeabi-v7a</code> native optimization) ensuring locked 60 FPS mobile performance.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">Mesh Slicing</span>
-                  <span class="project-tag">Procedural 3D</span>
-                  <span class="project-tag">Physics</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/Ahmad8i1a1/Fruit-Cutter" target="_blank" rel="noopener noreferrer" class="project-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Fruit Cutter - 3D Mesh Slicing</h3>
+              <p class="projects__subtitle">Mesh Math // Android Pacing</p>
+              <p class="projects__description">Dynamic mesh plane cutting with vertex split math, UV recalculation, and SwappyWrapper Android frame pacing.</p>
+              <div class="projects__tags"><span class="projects__tag">Mesh Slicing</span><span class="projects__tag">SwappyWrapper</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-fruit-cutter.jpg" alt="Fruit Cutter" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://github.com/Ahmad8i1a1/Fruit-Cutter" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-github-line"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 12. Jam Parking: Car Parking Games -->
-          <div class="project-card" data-category="games, puzzle, simulation">
-            <div class="project-thumb">
-              <span class="project-badge">Level Design &amp; Animation</span>
-              <img src="./assets/images/project-jam-parking.jpg" alt="Jam Parking Car Parking Games" loading="lazy">
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>12</h1></div>
+              <span class="projects__badge">Store Release</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Jam Parking: Car Parking Games</h3>
-              <ul class="project-bullets">
-                <li>Highly popular car parking grid puzzle title on Google Play Store.</li>
-                <li>Authored innovative new puzzle level designs with strategic obstacle placement and progressive difficulty curves.</li>
-                <li>Resolved collision detection bugs and grid indexing edge cases during simultaneous multi-vehicle departures.</li>
-                <li>Polished vehicle movement animations, suspension bounce on exit, and tactile haptic feedback on wall collisions.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">Level Design</span>
-                  <span class="project-tag">Grid Mechanics</span>
-                  <span class="project-tag">Car Parking</span>
-                  <span class="project-tag">Animation Polish</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://play.google.com/store/apps/details?id=com.ng.carparking.drivinggames" target="_blank" rel="noopener noreferrer" class="project-btn playstore">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    <span>PlayStore</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Jam Parking: Car Parking</h3>
+              <p class="projects__subtitle">Grid Mechanics</p>
+              <p class="projects__description">Authored puzzle level designs with progressive difficulty curves and polished vehicle collision haptics.</p>
+              <div class="projects__tags"><span class="projects__tag">Level Design</span><span class="projects__tag">Car Parking</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-jam-parking.jpg" alt="Jam Parking" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://play.google.com/store/apps/details?id=com.ng.carparking.drivinggames" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-google-play-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 13. Odd One Out Emoji -->
-          <div class="project-card" data-category="games, puzzle">
-            <div class="project-thumb">
-              <span class="project-badge">100k+ Downloads</span>
-              <img src="./assets/images/project-9.jpg" alt="Odd One Out Emoji" loading="lazy">
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>13</h1></div>
+              <span class="projects__badge">100K+ Downloads</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Odd One Out Emoji</h3>
-              <ul class="project-bullets">
-                <li>100,000+ Downloads on Google Play Store.</li>
-                <li>Reverse engineering and critical gameplay architecture bug resolution.</li>
-                <li>Updated Mobile Ads packages (AdMob, Gley, External Dependency Manager).</li>
-                <li>Optimized monetization: Banner, Interstitial, and Rewarded Video.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">Google Play</span>
-                  <span class="project-tag">AdMob SDK</span>
-                  <span class="project-tag">Puzzle</span>
-                  <span class="project-tag">100k Scale</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://play.google.com/store/apps/details?id=com.nexttechgamesstudios.emoji.odd.one.out.puzzle.game" target="_blank" rel="noopener noreferrer" class="project-btn playstore">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    <span>PlayStore</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Odd One Out Emoji</h3>
+              <p class="projects__subtitle">Visual Cognitive Puzzle</p>
+              <p class="projects__description">Fast-paced cognitive matching with dynamic difficulty scaling, streak combos, and AdMob rewarded waterfall.</p>
+              <div class="projects__tags"><span class="projects__tag">100k+ Downloads</span><span class="projects__tag">Puzzle</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-1.png" alt="Odd One Out Emoji" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://play.google.com/store/apps/details?id=com.vectorlabz.oddoneoutemoji" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-google-play-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 14. Odd One Out Letter -->
-          <div class="project-card" data-category="games, puzzle">
-            <div class="project-thumb">
-              <span class="project-badge">100k+ Downloads</span>
-              <img src="./assets/images/project-10.jpg" alt="Odd One Out Letter" loading="lazy">
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>14</h1></div>
+              <span class="projects__badge">100K+ Downloads</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Odd One Out Letter</h3>
-              <ul class="project-bullets">
-                <li>100,000+ Downloads on Google Play Store.</li>
-                <li>Solved production performance bottlenecks and ad delivery issues.</li>
-                <li>Integrated updated Mobile Ads packages with Google AdMob &amp; mediation.</li>
-                <li>Managed Open App, Banner, Interstitial, and Rewarded placements.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">Google Play</span>
-                  <span class="project-tag">Mediation</span>
-                  <span class="project-tag">100k Scale</span>
-                  <span class="project-tag">Puzzle</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://play.google.com/store/apps/details?id=com.nexttechgamesstudios.odd.one.letter.out.puzzle.game" target="_blank" rel="noopener noreferrer" class="project-btn playstore">
-                    <ion-icon name="logo-google-playstore"></ion-icon>
-                    <span>PlayStore</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Odd One Out Letter</h3>
+              <p class="projects__subtitle">Pattern Recognition</p>
+              <p class="projects__description">Alphabetical pattern recognition puzzle with timer pressure mechanics and responsive touch grid feedback.</p>
+              <div class="projects__tags"><span class="projects__tag">100k+ Downloads</span><span class="projects__tag">Puzzle</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-2.png" alt="Odd One Out Letter" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://play.google.com/store/apps/details?id=com.vectorlabz.oddoneoutword" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-google-play-fill"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 15. AI Based Traffic Simulation -->
-          <div class="project-card" data-category="games, ai, simulation">
-            <div class="project-thumb">
-              <span class="project-badge">AI Pathfinding // Unity C#</span>
-              <img src="./assets/images/project-2.png" alt="AI Based Traffic Model" loading="lazy">
+          <article class="projects__grid-card" data-category="games, ai">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>15</h1></div>
+              <span class="projects__badge">AI Pathfinding</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">AI Based Traffic Simulation</h3>
-              <ul class="project-bullets">
-                <li>Autonomous vehicle traffic simulation engineered with node-based waypoint graph route propagation and lane-following algorithms.</li>
-                <li>Dynamic forward raycast obstacle detection and automated collision avoidance with responsive speed throttling at intersections.</li>
-                <li>Waypoint network architecture supporting multi-lane switching, smooth bezier curves, and realistic turning physics.</li>
-                <li>100% natively built from scratch in Unity C# with zero external asset bloat for optimal mobile performance.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">Autonomous AI</span>
-                  <span class="project-tag">Pathfinding</span>
-                  <span class="project-tag">Unity 3D</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/Ahmad8i1a1/Car-Ai" target="_blank" rel="noopener noreferrer" class="project-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">AI Traffic Simulation</h3>
+              <p class="projects__subtitle">Waypoint Graph // Raycasts</p>
+              <p class="projects__description">Autonomous vehicle agent simulation using directed waypoint graphs, raycast obstacle perception, and intersection protocols.</p>
+              <div class="projects__tags"><span class="projects__tag">Waypoint Graphs</span><span class="projects__tag">Raycast AI</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-3.jpg" alt="AI Traffic Simulation" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://github.com/Ahmad8i1a1/Car-Ai" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-github-line"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- 16. Unity Dynamic Ads Remote Config Package -->
-          <div class="project-card" data-category="tools">
-            <div class="project-thumb">
-              <span class="project-badge">Modular Unity Package</span>
-              <img src="./assets/images/project-ads-package.jpg" alt="Unity Dynamic Ads Remote Config Package" loading="lazy">
+          <!-- 16. Unity Dynamic Ads Package -->
+          <article class="projects__grid-card" data-category="tools">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>16</h1></div>
+              <span class="projects__badge codekrux">Production Package</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Unity Dynamic Ads Remote Config Package</h3>
-              <ul class="project-bullets">
-                <li>Production-grade Unity monetization package enabling seamless runtime switching between AppLovin MAX and Google AdMob.</li>
-                <li>Remote Config driven: dynamically switch the active ad provider over-the-air without requiring app store updates or recompilation.</li>
-                <li>Unified mediation wrappers for App Open, Banner, Interstitial, and Rewarded Video ad placements.</li>
-                <li>Centralized event callbacks, automated fallback failover handling, and zero downtime during third-party ad network outages.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">Remote Config</span>
-                  <span class="project-tag">AppLovin / AdMob</span>
-                  <span class="project-tag">Mediation</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/Ahmad8i1a1/Ads_Custom_Package" target="_blank" rel="noopener noreferrer" class="project-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Dynamic Ads Remote Config</h3>
+              <p class="projects__subtitle">AppLovin MAX & AdMob</p>
+              <p class="projects__description">Remote Config driven ad network switcher enabling seamless live switching between AppLovin MAX and Google AdMob.</p>
+              <div class="projects__tags"><span class="projects__tag">Remote Config</span><span class="projects__tag">Ad Mediation</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-ads-package.jpg" alt="Dynamic Ads Package" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://github.com/Ahmad8i1a1/Ads_Custom_Package" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-github-line"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 17. Math Blaster (AR) -->
-          <div class="project-card" data-category="games, ar">
-            <div class="project-thumb">
-              <span class="project-badge">AR Spatial Foundation</span>
-              <img src="./assets/images/project-7.png" alt="Math Blaster AR" loading="lazy">
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>17</h1></div>
+              <span class="projects__badge">AR Foundation</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Math Blaster - AR Educational Shooter</h3>
-              <ul class="project-bullets">
-                <li>Augmented Reality (AR) interactive educational shooter built with Unity AR Foundation and ARKit/ARCore plane detection.</li>
-                <li>3D spatial target spawning and raycast projectile collision mechanics (<code>Bullet.cs</code>, <code>Boundary.cs</code>, <code>CameraRotator.cs</code>).</li>
-                <li>Capsule reward and power-up system (<code>ArmorCapsule.cs</code>, <code>BulletCapsule.cs</code>, <code>HealthCapsule.cs</code>, <code>PowerUpCapsule.cs</code>).</li>
-                <li>Multi-tier enemy AI behaviors (<code>Drone.cs</code>, <code>Crasher.cs</code>, <code>Boopboop.cs</code>, <code>Enemy.cs</code>) tied to arithmetic challenge loops.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">AR Foundation</span>
-                  <span class="project-tag">Spatial Math</span>
-                  <span class="project-tag">Mobile AR</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/Ahmad8i1a1/Math-Blaster" target="_blank" rel="noopener noreferrer" class="project-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Math Blaster - AR Educational</h3>
+              <p class="projects__subtitle">AR Foundation // Mobile</p>
+              <p class="projects__description">Augmented Reality target blaster using AR plane detection, real-world surface anchoring, and raycast hit detection.</p>
+              <div class="projects__tags"><span class="projects__tag">AR Foundation</span><span class="projects__tag">Raycast</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-4.png" alt="Math Blaster AR" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://github.com/Ahmad8i1a1/Math-Blaster" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-github-line"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 18. AutoClicker Web Extension -->
-          <div class="project-card" data-category="tools">
-            <div class="project-thumb">
-              <span class="project-badge">Web Automation</span>
-              <img src="./assets/images/project-autoclicker.jpg" alt="AutoClicker Chrome Extension" loading="lazy">
+          <article class="projects__grid-card" data-category="tools">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>18</h1></div>
+              <span class="projects__badge">Manifest V3</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">AutoClicker Web Extension</h3>
-              <ul class="project-bullets">
-                <li>Browser automation extension engineered with modern JavaScript Manifest V3 architecture (<code>manifest.json</code>, <code>background.js</code>, <code>popup.js</code>).</li>
-                <li>Background service worker managing asynchronous click timers and cross-tab DOM click dispatch events.</li>
-                <li>Interactive popup UI allowing real-time interval configuration (milliseconds), repeat counters, and element selectors.</li>
-                <li>Streamlined for automated web testing, repetitive workflows, and browser UI regression checks.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">Manifest V3</span>
-                  <span class="project-tag">JavaScript</span>
-                  <span class="project-tag">DOM Tool</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/Ahmad8i1a1/AutoClickerExtension" target="_blank" rel="noopener noreferrer" class="project-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">AutoClicker Web Extension</h3>
+              <p class="projects__subtitle">Web Automation</p>
+              <p class="projects__description">Chrome Extension Manifest V3 automation tool with event dispatch intervals, element target pickers, and storage syncing.</p>
+              <div class="projects__tags"><span class="projects__tag">Manifest V3</span><span class="projects__tag">Automation</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-autoclicker.jpg" alt="AutoClicker Web Extension" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://github.com/Ahmad8i1a1/AutoClickerExtension" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-github-line"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 19. NLP Grammar & Autocorrect -->
-          <div class="project-card" data-category="ai">
-            <div class="project-thumb">
-              <span class="project-badge">Python // NLP</span>
-              <img src="./assets/images/project-grammar-autocorrect.jpg" alt="NLP Grammar & Autocorrect System" loading="lazy">
+          <article class="projects__grid-card" data-category="ai">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>19</h1></div>
+              <span class="projects__badge">Python // NLP</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">NLP Grammar &amp; Autocorrect Engine</h3>
-              <ul class="project-bullets">
-                <li>Natural Language Processing pipeline developed in Python Jupyter Notebook (<code>Grammar_Autocorrect.ipynb</code>).</li>
-                <li>Levenshtein minimum edit distance algorithms (insert, delete, switch, replace operations) generating candidate word permutations.</li>
-                <li>Statistical n-gram language modeling calculating contextual word probabilities across corpus frequencies to select optimal corrections.</li>
-                <li>Rigorous evaluation suite assessing precision against typographical spelling errors and phonetic slips.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">NLP</span>
-                  <span class="project-tag">Levenshtein</span>
-                  <span class="project-tag">Python</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/Ahmad8i1a1/Grammar-Autocorrect-" target="_blank" rel="noopener noreferrer" class="project-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">NLP Grammar & Autocorrect</h3>
+              <p class="projects__subtitle">Levenshtein Edit Distance</p>
+              <p class="projects__description">Python NLP engine implementing minimum edit distance calculations, N-gram corpus language modeling, and token scoring.</p>
+              <div class="projects__tags"><span class="projects__tag">NLP</span><span class="projects__tag">Levenshtein</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-grammar-autocorrect.jpg" alt="NLP Grammar Autocorrect" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://github.com/Ahmad8i1a1/Grammar-Autocorrect-" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-github-line"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- 20. Naive Bayes Text Classifier -->
-          <div class="project-card" data-category="ai">
-            <div class="project-thumb">
-              <span class="project-badge">Machine Learning</span>
-              <img src="./assets/images/project-text-classification.jpg" alt="Naive Bayes Text Classifier" loading="lazy">
+          <article class="projects__grid-card" data-category="ai">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>20</h1></div>
+              <span class="projects__badge">Machine Learning</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Naive Bayes Text Classifier</h3>
-              <ul class="project-bullets">
-                <li>Supervised machine learning NLP pipeline implemented in Python (<code>text_classification_using_naive_bayes.ipynb</code>).</li>
-                <li>End-to-end text preprocessing: regex tokenization, lowercasing, stopword removal, and TF-IDF feature extraction.</li>
-                <li>Multinomial Naive Bayes probabilistic model training for multi-class document categorization and sentiment analysis.</li>
-                <li>Rigorous performance evaluation with confusion matrix heatmaps, precision, recall, and F1-score benchmarks.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">Scikit-Learn</span>
-                  <span class="project-tag">TF-IDF</span>
-                  <span class="project-tag">Data Science</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/Ahmad8i1a1/text-classification-using-naive-bayes" target="_blank" rel="noopener noreferrer" class="project-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Naive Bayes Text Classifier</h3>
+              <p class="projects__subtitle">TF-IDF // Scikit-Learn</p>
+              <p class="projects__description">Supervised machine learning model for document categorization featuring stop-word filtration, TF-IDF vectorization, and Laplace smoothing.</p>
+              <div class="projects__tags"><span class="projects__tag">TF-IDF</span><span class="projects__tag">Classification</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-text-classification.jpg" alt="Naive Bayes Classifier" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://github.com/Ahmad8i1a1/text-classification-using-naive-bayes" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-github-line"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- 21. 2D Platformer -->
-          <div class="project-card" data-category="games">
-            <div class="project-thumb">
-              <span class="project-badge">Unity 2D Engine</span>
-              <img src="./assets/images/project-5.jpeg" alt="2D Platformer" loading="lazy">
+          <!-- 21. 2D Platformer Engine -->
+          <article class="projects__grid-card" data-category="games">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>21</h1></div>
+              <span class="projects__badge">Unity 2D</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">2D Platformer Engine</h3>
-              <ul class="project-bullets">
-                <li>Passion project with intricate levels, puzzles, and interactive mechanics.</li>
-                <li>Challenges players to navigate obstacles, solve puzzles, and battle enemies.</li>
-                <li>Smooth platformer physics, tilemaps, and character controls.</li>
-                <li>100% designed and developed in Unity C#.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">2D Tilemaps</span>
-                  <span class="project-tag">Platformer</span>
-                  <span class="project-tag">Character Controller</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/Ahmad8i1a1/2D_plateformer" target="_blank" rel="noopener noreferrer" class="project-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">2D Platformer Engine</h3>
+              <p class="projects__subtitle">Kinematic Physics</p>
+              <p class="projects__description">Custom 2D platformer controller featuring variable height jumps, wall-sliding, coyote time, and 2D Tilemap integration.</p>
+              <div class="projects__tags"><span class="projects__tag">Physics</span><span class="projects__tag">Tilemap</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-7.png" alt="2D Platformer Engine" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://github.com/Ahmad8i1a1" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-github-line"></i></a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- 22. Mind Care -->
-          <div class="project-card" data-category="tools">
-            <div class="project-thumb">
-              <span class="project-badge">Figma UI/UX</span>
-              <img src="./assets/images/project-8.jpg" alt="Mind Care UI/UX" loading="lazy">
+          <!-- 22. Mind Care - Accessibility UX -->
+          <article class="projects__grid-card" data-category="tools">
+            <div class="projects__top-row">
+              <div class="projects__number"><h1>22</h1></div>
+              <span class="projects__badge">Figma UI/UX</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Mind Care - Accessibility UX</h3>
-              <ul class="project-bullets">
-                <li>Dedicated UI/UX prototype created for Alzheimer's patients.</li>
-                <li>100% researched and designed in Figma with accessibility principles.</li>
-                <li>Helps users navigate between locations and keep track of daily routines.</li>
-                <li>High contrast readability and intuitive touch targets.</li>
-              </ul>
-              <div class="project-footer">
-                <div class="project-tags">
-                  <span class="project-tag">Figma</span>
-                  <span class="project-tag">Accessibility</span>
-                  <span class="project-tag">UX Research</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://www.figma.com/proto/WnACIqS03in9b7iWdsgarG/HCI-project?node-id=208-771&starting-point-node-id=208%3A771" target="_blank" rel="noopener noreferrer" class="project-btn">
-                    <ion-icon name="open-outline"></ion-icon>
-                    <span>Figma Prototype</span>
-                  </a>
-                </div>
+            <div class="projects__data">
+              <h3 class="projects__title">Mind Care - Accessibility UX</h3>
+              <p class="projects__subtitle">Design Systems</p>
+              <p class="projects__description">Inclusive digital health UI prototype with high-contrast accessibility compliance, modular components, and mood check-in flows.</p>
+              <div class="projects__tags"><span class="projects__tag">Accessibility</span><span class="projects__tag">UI/UX</span></div>
+            </div>
+            <div class="projects__image">
+              <img src="./assets/images/project-12.png" alt="Mind Care UX" class="projects__img" loading="lazy" />
+              <div class="projects__links">
+                <a href="https://github.com/Ahmad8i1a1" target="_blank" rel="noopener noreferrer" class="projects__action-btn"><i class="ri-github-line"></i></a>
               </div>
             </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE & EDUCATION -->
+    <section class="work section" id="experience">
+      <div class="blob" style="bottom: 10%; left: 5%;"></div>
+      <h2 class="section__title">
+        <span>My Work</span> <br />
+        Experience
+      </h2>
+
+      <div class="work__container container">
+        <div class="work__tabs">
+          <button class="work__button work-active" data-target="#work-experience">
+            Experience <i class="ri-briefcase-3-line"></i>
+          </button>
+          <button class="work__button" data-target="#work-education">
+            Education <i class="ri-graduation-cap-line"></i>
+          </button>
+        </div>
+
+        <div class="work__area">
+          <div class="work__line"></div>
+
+          <!-- EXPERIENCE TAB CONTENT -->
+          <div class="work__content work-active" id="work-experience">
+
+            <!-- 1. CodeKrux -->
+            <div class="work__card">
+              <div class="work__marker"></div>
+              <div class="work__header">
+                <div>
+                  <h3 class="work__role">Game Developer & Backend Systems Engineer</h3>
+                  <p class="work__company">CodeKrux</p>
+                </div>
+                <span class="work__year">Jan 2025 - Present</span>
+              </div>
+              <ul class="work__bullets">
+                <li><b>Monetization & SDK Pipelines:</b> Engineered comprehensive ad mediation pipelines integrating AppLovin MAX, Google AdMob, Meta Audience Network, Unity Ads, ironSource, Mintegral, Pangle, Chartboost, and Liftoff.</li>
+                <li><b>Azure PlayFab Backend:</b> Architected scalable cloud infrastructure routing secure client-server HTTP communication via Unity Web Requests with IL2CPP compatibility.</li>
+                <li><b>Silent Authentication:</b> Developed frictionless anonymous onboarding (LoginWithCustomID) automatically provisioning new players.</li>
+                <li><b>V2 Leaderboards:</b> Implemented high-concurrency cloud leaderboard pipelines retrieving ranks and top scores with automated reset schedules.</li>
+                <li><b>Live-Ops Cache Purging:</b> Created cache invalidation protocols ensuring newly provisioned title data is served with zero client restarts.</li>
+                <li><b>Profiling & Workflow:</b> Configured JetBrains Rider C# profiling and Git LFS pipelines for large asset version control.</li>
+              </ul>
+            </div>
+
+            <!-- 2. SabaSoft -->
+            <div class="work__card">
+              <div class="work__marker"></div>
+              <div class="work__header">
+                <div>
+                  <h3 class="work__role">Unity Game Developer</h3>
+                  <p class="work__company">SabaSoft</p>
+                </div>
+                <span class="work__year">Jul 2024 - Dec 2024</span>
+              </div>
+              <ul class="work__bullets">
+                <li><b>Commercial Games:</b> Developed commercial puzzle and casual games from concept to release (Bulb Sort: Light Color Puzzle, Nut n Bolt Color Sorting).</li>
+                <li><b>Ad Mediation:</b> Built complete multi-network ad mediation framework and rewarded video waterfall architecture (Flip Diving Master: Flip Games).</li>
+                <li><b>2D Skeletal Animation:</b> Engineered 2D skeletal bone rigging into underwater environmental assets and sea grass (Fish Eat Fish And Grow).</li>
+                <li><b>UI Remapping:</b> Refactored canvas scaling and touch input systems for tall modern aspect ratios (Arrow Cube 3D: Escape Puzzle).</li>
+              </ul>
+            </div>
+
+            <!-- 3. SpeakBetter -->
+            <div class="work__card">
+              <div class="work__marker"></div>
+              <div class="work__header">
+                <div>
+                  <h3 class="work__role">Unity & AI Developer</h3>
+                  <p class="work__company">SpeakBetter</p>
+                </div>
+                <span class="work__year">Feb 2024 - Jun 2024</span>
+              </div>
+              <ul class="work__bullets">
+                <li>Integrated speech recognition and NLP fluency scoring models into interactive mobile learning environments.</li>
+                <li>Developed low-latency audio processing pipelines providing real-time visual pronunciation feedback to users.</li>
+              </ul>
+            </div>
+
+            <!-- 4. Numzz Tech -->
+            <div class="work__card">
+              <div class="work__marker"></div>
+              <div class="work__header">
+                <div>
+                  <h3 class="work__role">Junior Game Developer</h3>
+                  <p class="work__company">Numzz Tech</p>
+                </div>
+                <span class="work__year">Aug 2023 - Jan 2024</span>
+              </div>
+              <ul class="work__bullets">
+                <li><b>3D Simulation Recreation:</b> Developed 1-to-1 simulation gameplay recreation with a vibrant 3D city scene and 75 progressive challenge levels (Park Your Cruiser 3D).</li>
+                <li><b>Custom Hyper-Casual:</b> Transformed starter kit into a custom office runner with file stacking and CEO office delivery sequence (Stack Runner).</li>
+              </ul>
+            </div>
+
           </div>
 
+          <!-- EDUCATION TAB CONTENT -->
+          <div class="work__content" id="work-education">
+
+            <!-- University of Lahore -->
+            <div class="work__card">
+              <div class="work__marker"></div>
+              <div class="work__header">
+                <div>
+                  <h3 class="work__role">Bachelor of Science in Computer Science (BSCS)</h3>
+                  <p class="work__company">The University of Lahore</p>
+                </div>
+                <span class="work__year">2020 - 2024</span>
+              </div>
+              <ul class="work__bullets">
+                <li><b>Core Focus:</b> Game Architecture, Object-Oriented Software Engineering, Computer Graphics, Data Structures & Algorithms, Artificial Intelligence.</li>
+                <li><b>Applied Projects:</b> Developed real-time 3D simulation engines, machine learning NLP classifiers, and autonomous agent pathfinding frameworks.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT I OFFER / SERVICES -->
+    <section class="services section" id="services">
+      <div class="blob blob-2" style="top: 10%; right: 15%;"></div>
+      <h2 class="section__title">
+        What I <span>Offer</span>
+      </h2>
+
+      <div class="services__container container grid">
+
+        <!-- Card 1: Game Dev -->
+        <div class="services__card">
+          <div class="blob"></div>
+          <div>
+            <i class="ri-gamepad-line services__icon"></i>
+            <h3 class="services__title">Full-Cycle Game Development</h3>
+            <p class="services__description">
+              End-to-end mobile and desktop game development in Unity C#. From core prototype mechanics, physics colliders, and mesh deformation to release builds.
+            </p>
+          </div>
+
+          <div class="services__info">
+            <h4 class="services__subtitle">Core Technologies</h4>
+            <ul class="services__skills">
+              <li class="services__skill">Unity 2D & 3D</li>
+              <li class="services__skill">C# Architecture</li>
+              <li class="services__skill">HLSL / Shader Graph</li>
+              <li class="services__skill">Cinemachine</li>
+              <li class="services__skill">SwappyWrapper</li>
+              <li class="services__skill">Addressables</li>
+              <li class="services__skill">IL2CPP & ASTC</li>
+              <li class="services__skill">Profiler & Memory</li>
+            </ul>
+          </div>
+
+          <button class="services__button" aria-label="Toggle Details">
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+        </div>
+
+        <!-- Card 2: Monetization -->
+        <div class="services__card">
+          <div class="blob"></div>
+          <div>
+            <i class="ri-money-dollar-circle-line services__icon"></i>
+            <h3 class="services__title">Ad Mediation & Monetization</h3>
+            <p class="services__description">
+              Production ad mediation pipelines with runtime remote-config switching between AppLovin MAX and Google AdMob, rewarded video rewards, and waterfall yield optimization.
+            </p>
+          </div>
+
+          <div class="services__info">
+            <h4 class="services__subtitle">Supported Networks & Tools</h4>
+            <ul class="services__skills">
+              <li class="services__skill">AppLovin MAX</li>
+              <li class="services__skill">Google AdMob</li>
+              <li class="services__skill">Firebase Remote Config</li>
+              <li class="services__skill">Unity Ads</li>
+              <li class="services__skill">ironSource</li>
+              <li class="services__skill">Mintegral</li>
+              <li class="services__skill">Liftoff</li>
+              <li class="services__skill">Chartboost</li>
+              <li class="services__skill">Pangle</li>
+            </ul>
+          </div>
+
+          <button class="services__button" aria-label="Toggle Details">
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+        </div>
+
+        <!-- Card 3: Backend & Cloud -->
+        <div class="services__card">
+          <div class="blob"></div>
+          <div>
+            <i class="ri-cloud-line services__icon"></i>
+            <h3 class="services__title">Backend Architecture & LiveOps</h3>
+            <p class="services__description">
+              Cloud game infrastructure using Microsoft Azure PlayFab. Silent player onboarding, real-time leaderboards, virtual economy, and dynamic content updates.
+            </p>
+          </div>
+
+          <div class="services__info">
+            <h4 class="services__subtitle">Cloud & Protocol Stack</h4>
+            <ul class="services__skills">
+              <li class="services__skill">Azure PlayFab</li>
+              <li class="services__skill">Silent CustomID Auth</li>
+              <li class="services__skill">V2 Leaderboards</li>
+              <li class="services__skill">CloudScript</li>
+              <li class="services__skill">REST APIs & HTTP</li>
+              <li class="services__skill">JSON Serialization</li>
+              <li class="services__skill">Cache Purging</li>
+              <li class="services__skill">Security Pipelines</li>
+            </ul>
+          </div>
+
+          <button class="services__button" aria-label="Toggle Details">
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+        </div>
+
+        <!-- Card 4: Game AI & Machine Learning -->
+        <div class="services__card">
+          <div class="blob"></div>
+          <div>
+            <i class="ri-cpu-line services__icon"></i>
+            <h3 class="services__title">Game AI & Systems Engineering</h3>
+            <p class="services__description">
+              Autonomous NPC agent behaviors, directed waypoint graph pathfinding, raycast perception, state machines, and machine learning NLP pipelines.
+            </p>
+          </div>
+
+          <div class="services__info">
+            <h4 class="services__subtitle">AI Disciplines</h4>
+            <ul class="services__skills">
+              <li class="services__skill">Waypoint Graphs</li>
+              <li class="services__skill">Finite State Machines</li>
+              <li class="services__skill">Raycast Perception</li>
+              <li class="services__skill">Traffic Simulation</li>
+              <li class="services__skill">Levenshtein NLP</li>
+              <li class="services__skill">TF-IDF Classification</li>
+              <li class="services__skill">Python Scikit-Learn</li>
+            </ul>
+          </div>
+
+          <button class="services__button" aria-label="Toggle Details">
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
         </div>
 
       </div>
     </section>
 
-    <!-- Vector Wave Divider: Projects -> Experience -->
-    <div class="vector-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,50 C240,115 450,-10 650,55 C850,120 1050,15 1200,45 L1200,120 L0,120 Z" fill="#150f28"></path>
-      </svg>
-    </div>
+    <!-- TESTIMONIALS & STUDIO TRUST -->
+    <section class="testimonials section" id="testimonials">
+      <h2 class="section__title">
+        <span>What They Say</span> <br />
+        About My Work
+      </h2>
 
-    <!-- ==================== EXPERIENCE & TIMELINE ==================== -->
-    <section class="section" id="experience">
-      <div class="container">
+      <div class="testimonials__container">
+        <div class="testimonials__content">
 
-        <div class="section-header">
-          <div class="section-tag"><span class="vector-star-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span> Production History</div>
-          <h2 class="section-title">Industry Experience &amp; Engineering Roles</h2>
-          <p class="section-desc">
-            A proven record of engineering scalable backend infrastructure, architecting modular gameplay systems, and shipping commercial titles.
+          <article class="testimonials__card">
+            <div class="testimonials__header">
+              <div class="testimonials__avatar">CK</div>
+              <div>
+                <h4 class="testimonials__name">Engineering Lead</h4>
+                <p class="testimonials__role">CodeKrux</p>
+              </div>
+            </div>
+            <div class="testimonials__rating">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+            <p class="testimonials__quote">
+              "Ahmad engineered our complete ad mediation architecture and PlayFab backend with precision. He solved high-concurrency leaderboard edge cases with zero downtime."
+            </p>
+          </article>
+
+          <article class="testimonials__card">
+            <div class="testimonials__header">
+              <div class="testimonials__avatar">SS</div>
+              <div>
+                <h4 class="testimonials__name">Studio Producer</h4>
+                <p class="testimonials__role">SabaSoft</p>
+              </div>
+            </div>
+            <div class="testimonials__rating">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+            <p class="testimonials__quote">
+              "Ahmad brought multiple games from raw concept to full store release, including Bulb Sort and Nut n Bolt. His attention to smooth touch feel and optimization is exceptional."
+            </p>
+          </article>
+
+          <article class="testimonials__card">
+            <div class="testimonials__header">
+              <div class="testimonials__avatar">NT</div>
+              <div>
+                <h4 class="testimonials__name">Project Manager</h4>
+                <p class="testimonials__role">Numzz Tech</p>
+              </div>
+            </div>
+            <div class="testimonials__rating">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+            <p class="testimonials__quote">
+              "Ahmad transformed our vehicle parking project by building 75 intricate levels and a full city scene. Reliable, fast, and proactive in solving simulation bugs."
+            </p>
+          </article>
+
+          <article class="testimonials__card">
+            <div class="testimonials__header">
+              <div class="testimonials__avatar">SB</div>
+              <div>
+                <h4 class="testimonials__name">Tech Lead</h4>
+                <p class="testimonials__role">SpeakBetter</p>
+              </div>
+            </div>
+            <div class="testimonials__rating">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+            <p class="testimonials__quote">
+              "Ahmad's integration of speech recognition and low-latency audio pipelines into Unity was flawless. A talented developer who blends game feel with AI."
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+      <div class="blob" style="top: 30%; right: 10%;"></div>
+      <div class="contact__container container grid">
+
+        <div class="contact__data">
+          <h2 class="section__title" style="margin-bottom: 1rem;">
+            Contact <span>Me</span>
+          </h2>
+          <p class="contact__description">
+            Tell me about your next game or production pipeline.
           </p>
+          <button class="button contact__copy-btn" id="contact-btn">
+            Copy Email <i class="ri-file-copy-line"></i>
+          </button>
+          <span style="display: none;" id="contact-email">ahmadbilalmuhammadashraf@gmail.com</span>
         </div>
 
-        <div class="timeline-wrapper">
+        <div class="contact__content grid">
 
-          <!-- Industry Roles -->
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <ion-icon name="game-controller-outline"></ion-icon>
-              <h3>Commercial Experience</h3>
-            </div>
-
-            <ol class="timeline-list">
-
-              <li class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-meta-row">
-                  <h4 class="timeline-item-title">Unity Game Developer // CodeKrux</h4>
-                  <span class="timeline-item-meta">Feb 2025 — Present</span>
-                </div>
-                <div class="experience-content">
-                  <ul class="experience-list">
-                    <li>
-                      <strong>Monetization &amp; SDK Integration:</strong> Integrated various SDKs into Unity, including major Ad Networks (AppLovin, AdMob, Meta, Unity Ads, ironSource, Mintegral, Pangle, Chartboost, and Liftoff) to establish a comprehensive, production-ready ad mediation pipeline.
-                    </li>
-                    <li>
-                      <strong>Backend Architecture:</strong> Engineered scalable backend infrastructure using Microsoft Azure PlayFab, routing secure client-server HTTP communication via Unity Web Requests for optimal IL2CPP and mobile platform compatibility.
-                    </li>
-                    <li>
-                      <strong>Authentication Systems:</strong> Developed a frictionless player onboarding flow by implementing silent, anonymous authentication pipelines (<code>LoginWithCustomID</code>), automatically provisioning and authenticating user profiles via unique device identifiers without manual login screens.
-                    </li>
-                    <li>
-                      <strong>Competitive Leaderboards:</strong> Architected PlayFab V2 Statistics to power dynamic, multi-category global leaderboards, enabling real-time competitive score tracking and data synchronization.
-                    </li>
-                    <li>
-                      <strong>Live-Ops &amp; Environment Management:</strong> Managed database transitions from staging to live production environments by safely purging test-player caches, resetting active statistic versions, and transitioning ad networks to live application storefront URLs.
-                    </li>
-                    <li>
-                      <strong>Security &amp; API Governance:</strong> Secured backend architecture by auditing API feature policies, selectively restricting unauthorized client-side account generation while maintaining secure endpoints for post-match telemetry and score submissions.
-                    </li>
-                    <li>
-                      <strong>Development Workflow:</strong> Troubleshot and resolved complex IDE authorization and SDK configuration protocols within JetBrains Rider on macOS, ensuring a stable local environment for advanced C# scripting and backend API calls.
-                    </li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-meta-row">
-                  <h4 class="timeline-item-title">Unity Developer Intern // SabaSoft</h4>
-                  <span class="timeline-item-meta">Jun 2024 — Sep 2024</span>
-                </div>
-                <div class="experience-content">
-                  <ul class="experience-list">
-                    <li>
-                      <strong>Level Architecture &amp; Player Retention:</strong> Authored algorithmic, progressive level generation frameworks tuned to boost Day-1 and Day-7 player retention across commercial casual titles.
-                    </li>
-                    <li>
-                      <strong>Input Ergonomics &amp; Device Safe-Areas:</strong> Engineered responsive mobile touch recognition handling edge padding, physical camera cutouts, and notch boundaries across heterogeneous screen aspect ratios.
-                    </li>
-                    <li>
-                      <strong>Mediation &amp; Revenue Operations:</strong> Implemented Google AdMob mediation, rewarded video lifecycle events, and interstitial frequency capping to maximize eCPM without compromising player immersion.
-                    </li>
-                    <li>
-                      <strong>Runtime Debugging &amp; Stability:</strong> Spearheaded systematic Android and iOS crash resolution and memory footprint profiling, maintaining a 99.4%+ crash-free session rate.
-                    </li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-meta-row">
-                  <h4 class="timeline-item-title">Mobile Systems &amp; UX Developer // SpeakBetter</h4>
-                  <span class="timeline-item-meta">2023 — 2024</span>
-                </div>
-                <div class="experience-content">
-                  <ul class="experience-list">
-                    <li>
-                      <strong>Gamification Framework:</strong> Engineered interactive educational gamification modules, pattern recognition, and real-time pronunciation feedback loops.
-                    </li>
-                    <li>
-                      <strong>Modular UI Architecture:</strong> Built state-driven UI systems in Unity C# with decoupled event channels and low-latency audio processing pipelines.
-                    </li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-meta-row">
-                  <h4 class="timeline-item-title">Unity Developer Intern // Numzz Tech</h4>
-                  <span class="timeline-item-meta">Jun 2022 — Oct 2022</span>
-                </div>
-                <div class="experience-content">
-                  <ul class="experience-list">
-                    <li>
-                      <strong>Vehicle Dynamics &amp; Physics Simulation:</strong> Programmed realistic rigid-body vehicle mechanics, wheel friction curves, custom suspension dampening, and multi-layer collision matrices for commercial 3D simulation titles.
-                    </li>
-                    <li>
-                      <strong>Multi-Platform Publishing:</strong> Prepared and packaged production-ready builds across mobile app stores and console environments, managing asset bundles and texture compression profiles (ASTC/ETC2).
-                    </li>
-                    <li>
-                      <strong>Game Loops &amp; Feedback:</strong> Designed state machine game loops, scoring logic, and responsive visual/haptic feedback systems powering titles with 10k+ store downloads.
-                    </li>
-                  </ul>
-                </div>
-              </li>
-
-            </ol>
+          <div class="contact__box">
+            <i class="ri-mail-line contact__icon"></i>
+            <h3 class="contact__title">Email Direct</h3>
+            <address class="contact__address">ahmadbilalmuhammadashraf@gmail.com</address>
+            <a href="mailto:ahmadbilalmuhammadashraf@gmail.com" class="contact__direct-link">
+              Send an email <i class="ri-arrow-right-line"></i>
+            </a>
           </div>
 
-          <!-- Education -->
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <ion-icon name="school-outline"></ion-icon>
-              <h3>Academic Foundation</h3>
-            </div>
+          <div class="contact__box">
+            <i class="ri-whatsapp-line contact__icon"></i>
+            <h3 class="contact__title">Direct WhatsApp</h3>
+            <address class="contact__address">+92 309 1016766</address>
+            <a href="https://wa.me/923091016766" target="_blank" rel="noopener noreferrer" class="contact__direct-link">
+              Chat on WhatsApp <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
 
-            <ol class="timeline-list">
-
-              <li class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-meta-row">
-                  <h4 class="timeline-item-title">The University Of Lahore</h4>
-                  <span class="timeline-item-meta">2021 — 2025</span>
-                </div>
-                <div class="experience-content">
-                  <p class="timeline-item-desc" style="color: #cbd5e1; line-height: 1.7;">
-                    <strong style="color: #fff; font-size: 1rem;">Bachelor of Science in Software Engineering (BSSE)</strong><br>
-                    Academic Standing: <strong style="color: var(--cyan);">3.52 / 4.00 CGPA</strong><br>
-                    <span>Curriculum &amp; Specialization: Advanced Software Architecture, Distributed Systems, Data Structures &amp; Algorithms, Applied Artificial Intelligence, Object-Oriented Design Patterns, and Rigorous Software Verification &amp; Testing.</span>
-                  </p>
-                </div>
-              </li>
-
-              <li class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-meta-row">
-                  <h4 class="timeline-item-title">Govt. Islamia College Civil Lines</h4>
-                  <span class="timeline-item-meta">2018 — 2020</span>
-                </div>
-                <div class="experience-content">
-                  <p class="timeline-item-desc" style="color: #cbd5e1; line-height: 1.7;">
-                    <strong style="color: #fff; font-size: 1rem;">Intermediate in Computer Science (ICS)</strong><br>
-                    <span>Foundations: Discrete Mathematics, Statistics, Computer Architecture, and Core Algorithmic Problem Solving.</span>
-                  </p>
-                </div>
-              </li>
-
-            </ol>
+          <div class="contact__box">
+            <i class="ri-linkedin-fill contact__icon"></i>
+            <h3 class="contact__title">LinkedIn Network</h3>
+            <address class="contact__address">Ahmad Bilal</address>
+            <a href="https://www.linkedin.com/in/ahmad-bilal-300405225/" target="_blank" rel="noopener noreferrer" class="contact__direct-link">
+              Connect on LinkedIn <i class="ri-arrow-right-line"></i>
+            </a>
           </div>
 
         </div>
 
       </div>
     </section>
-
-    <!-- Vector Wave Divider: Experience -> Contact -->
-    <div class="vector-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0 C180,80 380,-30 550,50 C720,130 940,25 1200,65 L1200,120 L0,120 Z" fill="#1d1637"></path>
-      </svg>
-    </div>
-
-    <!-- ==================== CONTACT SECTION ==================== -->
-    <section class="section" id="contact" style="background: #1d1637;">
-      <div class="container">
-
-        <div class="section-header">
-          <div class="section-tag"><span class="vector-star-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span> Direct Contact</div>
-          <h2 class="section-title">Let's Build Something Great Together</h2>
-          <p class="section-desc">
-            Whether you need a dedicated Unity game developer, engine systems architect, or performance optimization specialist for your studio, I'm available for production projects and technical collaboration.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-
-          <!-- Left Info Card -->
-          <div class="contact-info-card">
-            <div>
-              <div class="status-pill" style="margin-bottom: 16px;">
-                <span class="status-dot"></span>
-                <span>Response Time: &lt; 12 Hours</span>
-              </div>
-              <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: #fff; margin-bottom: 12px;">Let's Connect</h3>
-              <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7;">
-                Reach out directly via WhatsApp, email, or schedule a technical call. Based in Lahore, Pakistan (PKT / UTC+5), collaborating globally.
-              </p>
-
-              <div class="contact-list">
-
-                <div class="contact-item">
-                  <div class="contact-icon"><ion-icon name="mail-outline"></ion-icon></div>
-                  <div>
-                    <div class="contact-label">Email Direct</div>
-                    <a href="mailto:ahmadbil941@gmail.com" class="contact-val">ahmadbil941@gmail.com</a>
-                  </div>
-                </div>
-
-                <div class="contact-item">
-                  <div class="contact-icon"><ion-icon name="logo-whatsapp"></ion-icon></div>
-                  <div>
-                    <div class="contact-label">WhatsApp / Phone</div>
-                    <a href="https://wa.me/923039965869" target="_blank" rel="noopener noreferrer" class="contact-val">+92 303 9965869</a>
-                  </div>
-                </div>
-
-                <div class="contact-item">
-                  <div class="contact-icon"><ion-icon name="location-outline"></ion-icon></div>
-                  <div>
-                    <div class="contact-label">Location</div>
-                    <span class="contact-val">Lahore, Punjab, Pakistan</span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div>
-              <div class="contact-label" style="margin-bottom: 12px;">Connect Across Networks</div>
-              <div class="social-links">
-                <a href="https://github.com/Ahmad8i1a1" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
-                  <ion-icon name="logo-github"></ion-icon>
-                </a>
-                <a href="https://www.linkedin.com/in/ahmad8i1a1/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-                <a href="https://x.com/Code_Like_Ahmad" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-                <a href="https://www.upwork.com/freelancers/~017d647e54076e2c1c" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Upwork">
-                  <ion-icon name="briefcase-outline"></ion-icon>
-                </a>
-                <a href="https://www.fiverr.com/ahmad8i1a1" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Fiverr">
-                  <ion-icon name="flash-outline"></ion-icon>
-                </a>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Right Contact Form -->
-          <div class="contact-form-card">
-            <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: #fff; margin-bottom: 20px;">Send a Direct Message</h3>
-
-            <form class="contact-form">
-
-              <div class="form-group">
-                <label class="form-label" for="form-name">Your Full Name</label>
-                <input type="text" id="form-name" class="form-input" placeholder="e.g. Alex Morgan" required>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="form-email">Email Address</label>
-                <input type="email" id="form-email" class="form-input" placeholder="alex@studio.com" required>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="form-subject">Project Topic / Inquiry</label>
-                <input type="text" id="form-subject" class="form-input" placeholder="e.g. Unity Architecture & Performance Optimization">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="form-message">Message Details</label>
-                <textarea id="form-message" class="form-textarea" placeholder="Tell me about your project goals, scope, and timeline..." required></textarea>
-              </div>
-
-              <button type="submit" class="form-submit-btn">
-                <span>Transmit Message</span>
-                <ion-icon name="paper-plane-outline"></ion-icon>
-              </button>
-
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Vector Wave Divider: Contact -> Footer -->
-    <div class="vector-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,45 C200,110 420,-10 620,55 C820,125 1040,15 1200,45 L1200,120 L0,120 Z" fill="#0f0a1e"></path>
-      </svg>
-    </div>
 
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-wrapper">
-      <div class="footer-status">
-        <span class="status-dot"></span>
-        <span>Systems Operational // Next-Gen Game &amp; XR Engineering</span>
-      </div>
-
-      <div>
-        &copy; 2026 Ahmad Bilal. Crafted with modular engine architecture &amp; gameplay passion.
-      </div>
+    <div class="container">
+      <p class="footer__copy">
+        &#169; <span id="footer-year">2026</span> <span>Ahmad Bilal</span>. All Rights Reserved. Built with clean web performance & interactive flow.
+      </p>
     </div>
   </footer>
 
-  <!-- Custom JavaScript -->
-  <script src="./assets/js/script.js"></script>
+  <!-- SCROLLREVEAL JS -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- SWIPER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- MAIN SCRIPT -->
+  <script src="assets/js/script.js"></script>
 
 </body>
-
 </html>
