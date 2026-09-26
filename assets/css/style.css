@@ -1041,6 +1041,16 @@ img {
   box-shadow: 0 5px 0 var(--king-green-shadow), 0 6px 14px rgba(0, 182, 125, 0.35);
 }
 
+.project-btn.appstore {
+  background: linear-gradient(180deg, #33adff 0%, #0099ff 100%);
+  box-shadow: 0 3px 0 var(--king-blue-shadow);
+}
+
+.project-btn.appstore:hover {
+  background: linear-gradient(180deg, #4db8ff 0%, #1aa3ff 100%);
+  box-shadow: 0 5px 0 var(--king-blue-shadow), 0 6px 14px rgba(0, 153, 255, 0.35);
+}
+
 /*-----------------------------------*\
   # TIMELINE & EXPERIENCE
 \*-----------------------------------*/
